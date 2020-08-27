@@ -1,43 +1,28 @@
 <template>
     <div id="home-page" class="home-page">
         <div id="firstscreen" class="firstscreen">
-            <header id="header" class="header" role="banner">
-                <div id="header-wrap" class="header-wrap">
-                    <div id="logo-top-left" class="logo-top-left">
-                        <img src="../assets/Ecsess-Logo3.png" id="ecsess-logo" class="ecsess-logo"/>
-                    </div>
-                    <div id="menubar-top-right" class="menubar-top-right">
-                        <div id="menu-displayed" class="menu-displayed">
-                            <ul id="menu-list" class="menu-list">
-                                <li id="menu-entry" class="menu-entry" v-for="menuOption in this.menuOptions" :key="menuOption.name">{{menuOption.name}}</li>
-                            </ul>
-                        </div>
-                        <div id="menu-button" class="menu-button">
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <div id="mainimage" class="mainimage">
-                <h1>Greetings.</h1>
-            </div>
+            <NavBar v-bind:menuOptions="menuOptions"/>
         </div>
+        <MainImage />
         <AboutUs />
     </div>
 </template>
 
 <script>
 import AboutUs from './AboutUs'
+import NavBar from './NavBar'
+import MainImage from './MainImage'
 
 export default {
     name: "Home",
-    components: {AboutUs},
+    components: {AboutUs, NavBar, MainImage},
     data() {
         return {menuOptions: this.menuOptions}
     },
     methods: {
 
     },
-    mounted() {
+    created () {
         this.menuOptions = [
             {name: "Home", route: "/"}, 
             {name: "Council", route: "/council"},
@@ -56,10 +41,6 @@ export default {
 
     .home-page {
         background-color: lightyellow;
-        width: 100%;
-    }
-
-    .firstscreen {
         width: 100%;
         height: 100%;
     }
@@ -129,6 +110,9 @@ export default {
         font-size: 200%;
         font-weight: 500;
         color: darkgreen;
+        -moz-user-select: none;
+        -webkit-user-select: none; 
+        user-select: none;   
     }
 
 
