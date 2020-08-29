@@ -8,7 +8,7 @@
                 <div id="menubar-top-right" class="menubar-top-right">
                     <div id="menu-displayed" class="menu-displayed">
                         <ul id="menu-list" class="menu-list">
-                            <li id="menu-entry" class="menu-entry" v-for="menuOption in menuOptions" :key="menuOption.name" v-on:click="handleNavClick(menuOption.route)">{{menuOption.name}}</li>
+                            <router-link id="menu-entry" class="menu-entry" v-for="menuOption in menuOptions" :key="menuOption.options" :to="`${menuOption.route}`">{{menuOption.name}}</router-link>
                         </ul>
                     </div>
                     <div id="menu-button" class="menu-button">
@@ -23,17 +23,18 @@
 export default {
     name: "NavBar",
     components: {},
-    props: {
-        menuOptions: Array
-    },
-    methods: {
-        handleNavClick: function (route) {
-            this.$emit('handleNavClick', {route: route})
+    data() {
+        return {menuOptions: [
+                {name: "Home", route: "/"}, 
+                {name: "Council", route: "/council"},
+                {name: "Events", route: "/events"},
+                {name: "Extracurriculars", route: "/extracurriculars"},
+                {name: "Opportunities", route: "/opportunities"},
+                {name: "Photos", route: "/photos"},
+                {name: "Bursaries", route: "/bursaries"}
+            ]
         }
     },
-    mounted() {
-
-    }
 }
 </script>
 
@@ -68,12 +69,13 @@ export default {
     }
 
     .menu-list {
-        list-style: none;
+        list-style: unset;
         text-align: right;
         padding-right: 5%;
     }
 
     .menu-entry {
+        text-decoration: unset;
         display: inline-block;
         font-family: 'Montserrat', sans-serif;
         font-size: 120%;

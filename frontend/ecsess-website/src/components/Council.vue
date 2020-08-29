@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Members from './Members'
+import Members from './Council-children/Members'
 
 export default {
     name: "Council",

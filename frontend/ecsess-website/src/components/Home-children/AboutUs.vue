@@ -4,7 +4,12 @@
             <h2>Who we are.</h2>
         </div>
         <div id="section-text" class="section-text">
-            <p>Text goes here.</p>
+            <div id="textbox" class="textbox">
+                <p>We are the Electrical, Computer and Software Engineering Students' Society at McGill University.</p>
+            </div>
+            <div id="textimage" class="textbox">
+                <img id="council20192020" class="council20192020" src="../../assets/council2019-2020.jpg" />
+            </div>
         </div>
     </div>
 </template>
@@ -13,9 +18,6 @@
 export default {
     name: "AboutUs",
     components: {},
-    data() {
-
-    },
     methods: {
 
     }
@@ -31,11 +33,12 @@ export default {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        height: 100%;
     }
 
     .subtitle {
         text-align: center;
-        padding-top: 4%;
+        padding-top: 10%;
         padding-bottom: 4%;
         background-color: white;
     }
@@ -47,8 +50,40 @@ export default {
         color: darkgreen;
     }
 
+    p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 100%;
+        font-weight: 300;
+        color: darkgreen;
+    }
+
     .section-text {
-        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3em;
+        padding-bottom: 3em;
+        padding-left: 3em;
+        padding-right: 3em;
+        overflow: hidden;
+    }
+
+    .textbox {
+        width: 50%;
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .textimage {
+        width: 50%;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .council20192020 {
+        height: 20em;
     }
 
 </style>

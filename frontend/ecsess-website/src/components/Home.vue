@@ -1,26 +1,32 @@
 <template>
     <div id="home-page" class="home-page">
-
         <MainImage id="main-image" class="main-image"/>
         <AboutUs id="about-us" class="about-us"/>
+        <StayConnected id="stay-connected" class="stay-connected"/>
     </div>
 </template>
 
 <script>
-import AboutUs from './AboutUs'
-import MainImage from './MainImage'
+import AboutUs from './Home-children/AboutUs'
+import MainImage from './Home-children/MainImage'
+import StayConnected from './Home-children/StayConnected'
 
 export default {
     name: "Home",
-    components: {AboutUs, MainImage},
+    components: {AboutUs, MainImage, StayConnected},
     methods: {
     },
     created () {
         window.addEventListener("scroll", function () {
-            console.log(0.01*window.scrollY)
+            console.log(0.005*window.scrollY)
             document.getElementById("main-image").style.opacity = 1 - (0.005*window.scrollY)
-        })
-        
+            //document.getElementById("about-us").style.opacity = 4 - (0.005*window.scrollY)
+            //document.getElementById("stay-connected").style.opacity = 7 - (0.005*window.scrollY)
+            
+            if (this.window.scrollY >= document.getElementById("about-us").offsetTop) document.getElementById("about-us").classList.add("fixplace")
+             document.getElementById("about-us").classList.remove("fixplace")
+
+        })        
     }
 }
 </script>
@@ -49,10 +55,6 @@ export default {
         background-color: lightyellow;
     }
 
-    .main-image.parallax {
-
-    }
-
     h1 {
         all: unset;
         line-height: 100vh;
@@ -75,8 +77,22 @@ export default {
         background-color: lightyellow;
     }
 
-    .about-us.move {
-        
+    .about-us.fixplace {
+        position: fixed;
+        top: 0;
+    }
+
+    .stay-connected {
+        top: 200vh;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+        height: 87%;
+    }
+
+    .stay-connected.fixplace {
+        position: fixed;
+        top: 17%;
     }
 
 
