@@ -1,7 +1,7 @@
 <template>
     <div id="about-us-section">
         <div id="subtitle" class="subtitle">
-            <h2>Our Mission</h2>
+            <h2>Who we are.</h2>
         </div>
         <div id="section-text" class="section-text">
             <p>Text goes here.</p>
@@ -35,8 +35,8 @@ export default {
 
     .subtitle {
         text-align: center;
-        padding-top: 8%;
-        padding-bottom: 8%;
+        padding-top: 4%;
+        padding-bottom: 4%;
         background-color: white;
     }
 
