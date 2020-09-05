@@ -49,6 +49,7 @@ export default {
         justify-content: center;
         height: 8em;
         width: 100%;
+        background-color: rgb(243, 243, 211);
     }
 
     .logo-top-left {
@@ -85,6 +86,7 @@ export default {
         padding-left: 1em;
         padding-right: 1em;
         transition: 0.3s;
+        border-radius: 0.5em;
         background-size: 100% 200%;
         background-image: linear-gradient(to bottom, transparent 50%, rgb(205, 241, 188) 50%);
     }

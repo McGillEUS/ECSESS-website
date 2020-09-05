@@ -1,8 +1,11 @@
 <template>
     <div id="home-page" class="home-page">
         <MainImage id="main-image" class="main-image"/>
-        <AboutUs id="about-us" class="about-us"/>
-        <StayConnected id="stay-connected" class="stay-connected"/>
+        <div id="home-page-after-main-image" class="home-page-after-main-image">
+            <AboutUs id="about-us" class="about-us"/>
+            <Resources id="resources" class="resources"/>
+            <StayConnected id="stay-connected" class="stay-connected"/>
+        </div>
     </div>
 </template>
 
@@ -10,22 +13,17 @@
 import AboutUs from './Home-children/AboutUs'
 import MainImage from './Home-children/MainImage'
 import StayConnected from './Home-children/StayConnected'
+import Resources from './Home-children/Resources'
 
 export default {
     name: "Home",
-    components: {AboutUs, MainImage, StayConnected},
+    components: {AboutUs, MainImage, StayConnected, Resources},
     methods: {
     },
     created () {
         window.addEventListener("scroll", function () {
             console.log(0.005*window.scrollY)
             document.getElementById("main-image").style.opacity = 1 - (0.005*window.scrollY)
-            //document.getElementById("about-us").style.opacity = 4 - (0.005*window.scrollY)
-            //document.getElementById("stay-connected").style.opacity = 7 - (0.005*window.scrollY)
-            
-            if (this.window.scrollY >= document.getElementById("about-us").offsetTop) document.getElementById("about-us").classList.add("fixplace")
-             document.getElementById("about-us").classList.remove("fixplace")
-
         })        
     }
 }
@@ -49,6 +47,8 @@ export default {
     .main-image {
         width: 100%;
         height: 100vh;
+        padding-top: 50vh;
+        padding-bottom: 50vh;
         text-align: center;
         z-index: -2;
         position: fixed;
@@ -57,43 +57,48 @@ export default {
 
     h1 {
         all: unset;
-        line-height: 100vh;
         width: 100%;
         font-family: 'Montserrat', sans-serif;
         font-size: 200%;
         font-weight: 500;
-        color: darkgreen;
+        color: salmon;
         -moz-user-select: none;
         -webkit-user-select: none; 
         user-select: none;   
     }
 
-    .about-us {
-        position: absolute;
+    h5 {
+        all: unset;
         width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 100%;
+        font-weight: 400;
+        color: salmon;
+        -moz-user-select: none;
+        -webkit-user-select: none; 
+        user-select: none;   
+    }
+
+    .home-page-after-main-image {
+        position: absolute;
         top: 100vh;
-        z-index: -1;
-        height: 87%;
+    }
+
+    .about-us {
+        width: 100%;
+        z-index: 0;
         background-color: lightyellow;
     }
 
-    .about-us.fixplace {
-        position: fixed;
-        top: 0;
-    }
-
     .stay-connected {
-        top: 200vh;
-        position: absolute;
         width: 100%;
         z-index: 0;
-        height: 87%;
     }
 
-    .stay-connected.fixplace {
-        position: fixed;
-        top: 17%;
+    .resources {
+        width: 100%;
+        z-index: 0;
+        background-color: lightyellow;
     }
-
 
 </style>
