@@ -7,6 +7,7 @@
       <EventSlideshow id="eventslideshow" class="eventslideshow" />
       <StayConnected id="stay-connected" class="stay-connected" />
       <Bottom id="bottom" class="bottom" />
+      <!-- wow ricky u looking fine -->
     </div>
   </div>
 </template>
