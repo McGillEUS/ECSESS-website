@@ -4,7 +4,9 @@
     <div id="home-page-after-main-image" class="home-page-after-main-image">
       <AboutUs id="about-us" class="about-us" />
       <Resources id="resources" class="resources" />
+      <EventSlideshow id="eventslideshow" class="eventslideshow" />
       <StayConnected id="stay-connected" class="stay-connected" />
+      <Bottom id="bottom" class="bottom" />
     </div>
   </div>
 </template>
@@ -14,10 +16,19 @@ import AboutUs from "./Home-children/AboutUs";
 import MainImage from "./Home-children/MainImage";
 import StayConnected from "./Home-children/StayConnected";
 import Resources from "./Home-children/Resources";
+import EventSlideshow from "./Home-children/EventSlideshow";
+import Bottom from "./General-children/Bottom";
 
 export default {
   name: "Home",
-  components: { AboutUs, MainImage, StayConnected, Resources },
+  components: {
+    AboutUs,
+    MainImage,
+    StayConnected,
+    Resources,
+    EventSlideshow,
+    Bottom,
+  },
   methods: {},
   created() {
     window.addEventListener("scroll", function () {
@@ -67,32 +78,11 @@ h1 {
   user-select: none;
 }
 
-h5 {
-  all: unset;
-  width: 100%;
-  font-family: "Montserrat", sans-serif;
-  font-size: 100%;
-  font-weight: 400;
-  color: salmon;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
 .home-page-after-main-image {
   position: absolute;
+  width: 100%;
+  z-index: -1;
   top: 100vh;
-}
-
-.about-us {
-  width: 100%;
-  z-index: 0;
-  background-color: lightyellow;
-}
-
-.stay-connected {
-  width: 100%;
-  z-index: 0;
 }
 
 .resources {
