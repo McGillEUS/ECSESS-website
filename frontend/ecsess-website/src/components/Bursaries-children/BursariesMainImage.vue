@@ -1,12 +1,12 @@
 <template>
     <div id="mainimage" class="mainimage">
-        <h1>The ECSESS Council</h1><br>
+        <h1>Bursaries</h1><br>
     </div>
 </template>
 
 <script>
 export default {
-    name: "CouncilMainImage",
+    name: "BursariesMainImage",
     components: {},
     methods: {
 

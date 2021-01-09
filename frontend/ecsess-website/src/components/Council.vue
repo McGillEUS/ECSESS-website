@@ -40,4 +40,21 @@ export default {
         background-color: lightyellow;
     }
 
+    .members {
+        z-index: 0;
+        background-color: lightyellow;
+    }
+
+    h1 {
+        all: unset;
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
+        font-size: 200%;
+        font-weight: 500;
+        color: salmon;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        }
+
 </style>

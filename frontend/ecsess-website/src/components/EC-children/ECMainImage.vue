@@ -1,13 +1,12 @@
 <template>
     <div id="mainimage" class="mainimage">
-        <h1>Hello World.</h1><br>
-        <h5>Welcome to the new ECSESS website.</h5>
+        <h1>Extracurriculars</h1><br>
     </div>
 </template>
 
 <script>
 export default {
-    name: "MainImage",
+    name: "ECMainImage",
     components: {},
     methods: {
 
