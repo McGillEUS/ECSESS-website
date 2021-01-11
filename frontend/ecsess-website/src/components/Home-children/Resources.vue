@@ -6,10 +6,11 @@
         <div id="triple-column-display" class="triple-column-display">
             <li id="resource-panel-1" class="resource-panel">
                 <div id="resource-panel-button-1" class="resource-panel-button">
-                    <h3>
-                        __$ bursaries or smt.
-                    </h3>
-                </div>
+
+                </div>                    
+                <h3 id="featuretext" class="featuretext">
+                    ECSESS Initiative Fund
+                </h3>
             </li>
             <li id="resource-panel-2" class="resource-panel">
                 <div id="resource-panel-button-2" class="resource-panel-button">
@@ -75,7 +76,11 @@ export default {
         background-size: cover;
         background-repeat: no-repeat;
         transition: all 0.3s;
-
+        -webkit-filter: brightness(50%);
+        -moz-filter: brightness(50%);
+        -o-filter: brightness(50%);
+        -ms-filter: brightness(50%);
+        filter: brightness(50%);
     }
 
     .resource-panel-button:hover {
@@ -83,7 +88,7 @@ export default {
     }
 
     #resource-panel-button-1 {
-        background-image: url('../../assets/semiconductors.jpg');
+        background-image: url('../../assets/funds-featured.jpg');
     }
 
     #resource-panel-button-2 {
@@ -98,6 +103,10 @@ export default {
         font-family: 'Montserrat';
         font-size: 120%;
         font-weight: 600;
+    }
+
+    .featuretext {
+        position: absolute;
     }
 
 </style>

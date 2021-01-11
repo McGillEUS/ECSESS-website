@@ -5,6 +5,8 @@ const Events = () => import('./components/Events.vue')
 const Extracurriculars = () => import('./components/Extracurriculars.vue')
 const Opportunities = () => import('./components/Opportunities.vue')
 const Photos = () => import('./components/Photos.vue')
+const FYC = () => import('./components/ECSESSBits.vue')
+const StudentSpaces = () => import('./components/StudentSpaces.vue')
 
 
 const routes = [
@@ -14,7 +16,9 @@ const routes = [
     {path: '/events', component: Events},
     {path: '/extracurriculars', component: Extracurriculars},
     {path: '/opportunities', component: Opportunities},
-    {path: '/photos', component: Photos}
+    {path: '/photos', component: Photos},
+    {path: '/bits', component: FYC},
+    {path: '/spaces', component: StudentSpaces}
 ]
 
 export default routes

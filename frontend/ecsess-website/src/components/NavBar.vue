@@ -40,9 +40,11 @@ export default {
 				{ name: "Council", route: "/council" },
 				{ name: "Events", route: "/events" },
 				{ name: "Extracurriculars", route: "/extracurriculars" },
-				{ name: "Opportunities", route: "/opportunities" },
+				{ name: "Resources", route: "/opportunities" },
 				{ name: "Photos", route: "/photos" },
-				{ name: "Bursaries", route: "/bursaries" },
+				{ name: "Funds", route: "/bursaries" },
+				{ name: "ECSESSBits", route: "/bits"},
+				{ name: "Student Spaces", route: "/spaces"}
 			],
 		};
 	},
