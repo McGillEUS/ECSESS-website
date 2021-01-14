@@ -6,7 +6,7 @@
         <div id="events-list" class="events-list">
             <li id="event-item" class="event-item" v-for="event in events" :key="event">
                 <!-- TODO add the text/pic and hover variations after -->
-                <div id="event-item-" class="event-panel-button">
+                <div id="event-item-pic" class="event-item-pic">
                     <h3>
                         {{event.name}}
                     </h3>
@@ -47,7 +47,7 @@ export default {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 3em;
+        padding: 5em;
         overflow: hidden;
     }
 
@@ -55,15 +55,15 @@ export default {
         all: unset;
         width: 33%;
         text-align: center;
-        padding: 0;
+        padding: 1em;
         color: white;
     }
 
-    .event-panel-button {
-        margin-left: 10%;
-        margin-right: 10%;
-        padding-top: 20%;
-        padding-bottom: 20%;
+    .event-item-pic {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding-top: 30%;
+        padding-bottom: 30%;
         padding-left: 10%;
         padding-right: 10%;
         border-radius: 0.5em;
@@ -74,12 +74,11 @@ export default {
 
     }
 
-    .event-panel-button:hover {
+    #event-item-pic:hover {
         //TODO switch pics 
-        transform: scale(1.1);
     }
 
-    #event-panel-button-1 {
+    #event-item-pic {
         background-image: url('../../assets/semiconductors.jpg');
     }
 
