@@ -2,17 +2,26 @@
     <div id="events" class="events">
         <EventsMainImage id="main-image" class="main-image"/>
         <div id="events-content" class="events-content">
-            
+           <EventList id="eventList" class="eventList"/>
         </div>
     </div>
 </template>
 
 <script>
 import EventsMainImage from "./Events-children/EventsMainImage.vue"
+import EventList from "./Events-children/EventList.vue"
 
 export default {
     name: "Events",
-    components: {EventsMainImage}
+    components: {EventsMainImage, EventList},
+    methods: {},
+    created() {
+        window.addEventListener("scroll", function () {
+        console.log(0.005 * window.scrollY);
+        document.getElementById("main-image").style.opacity =
+            1 - 0.005 * window.scrollY;
+    });
+  }
 }
 </script>
 
