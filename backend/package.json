@@ -1,0 +1,19 @@
+{
+  "name": "ecsess-backend",
+  "version": "1.0.0",
+  "description": "Backend and admin controller for ecsess website",
+  "main": "./app/src/server.js",
+  "scripts": {
+    "start": "node ./app/src/server.js",
+    "test": "mocha --reporter spec"
+  },
+  "author": "Ricky Liu & Adel Ahram",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mocha": "^8.2.1",
+    "request": "^2.88.2"
+  }
+}

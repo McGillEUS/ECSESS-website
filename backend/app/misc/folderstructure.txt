@@ -1,0 +1,3 @@
+Here is the link to a nice article from which we inspire ourselves for the backend folder structure, dependency management and modularity.
+
+https://softwareontheroad.com/ideal-nodejs-project-structure/#folder

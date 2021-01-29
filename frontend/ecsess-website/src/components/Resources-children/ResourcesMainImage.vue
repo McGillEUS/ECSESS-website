@@ -1,12 +1,12 @@
 <template>
     <div id="mainimage" class="mainimage">
-        <h1>Opportunities</h1><br>
+        <h1>Resources</h1><br>
     </div>
 </template>
 
 <script>
 export default {
-    name: "OpportunitiesMainImage",
+    name: "ResourcesMainImage",
     components: {},
     methods: {
 
