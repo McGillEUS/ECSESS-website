@@ -1,18 +1,18 @@
 <template>
-    <div id="opportunities" class="opportunities">
-        <OpportunitiesMainImage id="main-image" class="main-image"/>
-        <div id="Opportunities-content" class="Opportunities-content">
+    <div id="resources" class="resources">
+        <ResourcesMainImage id="main-image" class="main-image"/>
+        <div id="Resources-content" class="Resources-content">
             
         </div>
     </div>
 </template>
 
 <script>
-import OpportunitiesMainImage from "./Opportunities-children/OpportunitiesMainImage.vue"
+import ResourcesMainImage from "./Resources-children/ResourcesMainImage.vue"
 
 export default {
-    name: "Opportunities",
-    components: {OpportunitiesMainImage}
+    name: "Resources",
+    components: {ResourcesMainImage}
 }
 </script>
 
