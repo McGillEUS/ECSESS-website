@@ -1,1 +1,0 @@
-https://softwareontheroad.com/ideal-nodejs-project-structure/#configs ----- for folder structure inspiration
