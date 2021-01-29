@@ -4,11 +4,14 @@
   "description": "Backend and admin controller for ecsess website",
   "main": "./app/src/server.js",
   "scripts": {
-    "start": "node ./app/src/server.js",
+    "start": "nodemon ./app/src/server.js",
     "test": "mocha --reporter spec"
   },
   "author": "Ricky Liu & Adel Ahram",
   "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
@@ -16,6 +19,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mocha": "^8.2.1",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "sequelize": "^6.5.0"
   }
 }

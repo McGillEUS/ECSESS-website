@@ -7,6 +7,7 @@ require("dotenv").config();
 
 const {
     PORT,
+    TESTPORT,
     BACKEND_DOMAIN,
     DATABASE_URL,
 } = process.env;
@@ -14,6 +15,7 @@ const {
 const config = {
     backend: {
         PORT,
+        TESTPORT,
         BACKEND_DOMAIN,
     },
     database: {

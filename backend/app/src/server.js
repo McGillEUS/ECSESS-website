@@ -13,7 +13,8 @@ const http = require("http");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const router = require("./api/api");
-const config = require("./config/config")
+const config = require("./config/config");
+const sequelize = require("sequelize");
 
 //helper module imports
 
@@ -39,16 +40,17 @@ app.use(bodyParser.json());
 app.use("/api", router);
 
 //CONNECT TO STATIC FRONTEND BUILD
-const FRONTENDPATH = "../../../frontend/ecsess-website/build";
-app.use(express.static(FRONTENDPATH));
+//const FRONTENDPATH = "../../../frontend/ecsess-website/build";
+//app.use(express.static(FRONTENDPATH));
 
 //GET STATIC FRONTEND ON BASE API CALL
 app.get("/", (req, res) => {
-    res.sendFile("index.html", { root: FRONTENDPATH });
+    res.send("Hi!");
 });
 
 //START SERVER FOR API
 const server = http.createServer(app);
-server.listen(config.backend.PORT, () => {
-    console.log(`Server is currently running on port ${config.backend.PORT}`);
+const PORT = config.backend.TESTPORT; //change this for different builds
+server.listen(PORT, () => {
+    console.log(`Server is currently running on port ${PORT}`);
 })
