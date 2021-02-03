@@ -1,0 +1,46 @@
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    font-weight: 300;
+    color: darkgreen;
+}
+
+b {
+    font-weight: 500;
+}
+
+.section-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+    overflow: hidden;
+}
+
+.textbox {
+    width: 50%;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+h5 {
+    all: unset;
+    font-family: "Montserrat", sans-serif;
+    font-size: 80%;
+    font-weight: 400;
+    color: salmon;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    }
+
+    h3 {
+        font-family: 'Montserrat';
+        font-size: 120%;
+        font-weight: 600;
+    }

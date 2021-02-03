@@ -2,7 +2,6 @@ const Council = () => import('../components/Council.vue')
 const Home = () => import('../components/Home.vue')
 const Bursaries = () => import('../components/Bursaries.vue')
 const Events = () => import('../components/Events.vue')
-const Extracurriculars = () => import('../components/Extracurriculars.vue')
 const Resources = () => import('../components/Resources.vue')
 const Photos = () => import('../components/Photos.vue')
 const FYC = () => import('../components/ECSESSBits.vue')
@@ -14,7 +13,6 @@ const routes = [
     {path: '/', component: Home},
     {path: '/bursaries', component: Bursaries},
     {path: '/events', component: Events},
-    {path: '/extracurriculars', component: Extracurriculars},
     {path: '/resources', component:  Resources},
     {path: '/photos', component: Photos},
     {path: '/bits', component: FYC},

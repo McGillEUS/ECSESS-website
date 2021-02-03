@@ -1,0 +1,23 @@
+@import "./style-components/mainImage.scss";
+@import "./style-components/title.scss";
+@import "./style-components/pageBody.scss";
+@import "./style-components/subtitle.scss";
+@import "./style-components/text.scss";
+@import "./style-components/images.scss";
+@import "./style-components/button.scss";
+
+.home-page {
+    background-color: lightyellow;
+    width: 100%;
+    height: 100%;
+}
+
+.learn-more {
+    margin-top: 5%;
+}
+  
+.resources {
+    width: 100%;
+    z-index: 0;
+    background-color: lightyellow;
+}

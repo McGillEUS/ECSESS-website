@@ -39,7 +39,6 @@ export default {
 				{ name: "Home", route: "/" },
 				{ name: "Council", route: "/council" },
 				{ name: "Events", route: "/events" },
-				{ name: "Extracurriculars", route: "/extracurriculars" },
 				{ name: "Resources", route: "/resources" },
 				{ name: "Photos", route: "/photos" },
 				{ name: "Funds", route: "/bursaries" },

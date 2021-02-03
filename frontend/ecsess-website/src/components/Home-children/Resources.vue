@@ -99,12 +99,6 @@ export default {
         background-image: url('../../assets/semiconductors.jpg');
     }
 
-    h3 {
-        font-family: 'Montserrat';
-        font-size: 120%;
-        font-weight: 600;
-    }
-
     .featuretext {
         position: absolute;
     }
