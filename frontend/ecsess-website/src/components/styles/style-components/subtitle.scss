@@ -12,3 +12,23 @@ h2 {
     background-color: rgb(243, 243, 211)
 
 }
+
+.sub-subtitle {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pink-highlight {
+    background-color: salmon;
+    border-radius: 0.5em;
+    padding: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 2%;
+    color: white;
+    transition: 0.3s;
+}

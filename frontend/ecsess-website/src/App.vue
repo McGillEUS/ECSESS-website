@@ -15,6 +15,13 @@ import NavBar from './components/NavBar'
 export default {
   name: 'App',
   components: {NavBar},
+  created() {
+    window.addEventListener("scroll", function () {
+      console.log(0.005 * window.scrollY);
+      document.getElementById("main-image").style.opacity =
+        1 - 0.005 * window.scrollY;
+    });
+  },
 }
 </script>
 

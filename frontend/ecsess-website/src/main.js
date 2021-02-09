@@ -3,6 +3,7 @@ import App from "./App.vue";
 import VueRouter from "vue-router";
 import routes from "./routes/routes.js";
 import $ from "jquery";
+import VueFormulate from '@braid/vue-formulate';
 
 Vue.config.productionTip = false;
 window.$ = $;
@@ -12,6 +13,8 @@ const router = new VueRouter({
 	mode: "history",
 	routes,
 });
+
+Vue.use(VueFormulate);
 
 new Vue({
 	router,

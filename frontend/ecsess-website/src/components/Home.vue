@@ -1,7 +1,7 @@
 <template>
   <div id="home-page" class="home-page">
     <MainImage id="main-image" class="main-image" />
-    <div id="page-body" class="page-body">
+    <div id="home-page-body" class="page-body">
       <AboutUs id="about-us" class="about-us" />
       <Resources id="resources" class="resources" />
       <EventSlideshow id="eventslideshow" class="eventslideshow" />
@@ -31,13 +31,7 @@ export default {
     Bottom,
   },
   methods: {},
-  created() {
-    window.addEventListener("scroll", function () {
-      console.log(0.005 * window.scrollY);
-      document.getElementById("main-image").style.opacity =
-        1 - 0.005 * window.scrollY;
-    });
-  },
+
 };
 </script>
 

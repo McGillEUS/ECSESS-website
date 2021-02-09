@@ -42,5 +42,28 @@ h5 {
     h3 {
         font-family: 'Montserrat';
         font-size: 120%;
-        font-weight: 600;
+        font-weight: 500;
     }
+
+    .green-h3 {
+        color: darkgreen;
+        margin-bottom: 1em;
+    }
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 160%;
+        font-weight: 400;
+        color: darkgreen;
+    }
+
+.imgtext {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 160%;
+    font-weight: 400;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

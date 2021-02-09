@@ -1,0 +1,30 @@
+@import "./style-components/text.scss";
+@import "./style-components/subtitle.scss";
+@import "./style-components/mainImage.scss";
+@import "./style-components/title.scss";
+@import "./style-components/pageBody.scss";
+@import "./style-components/entityPanel.scss";
+@import "./style-components/images.scss";
+@import "./style-components/member.scss";
+@import "./style-components/form.scss";
+
+.academic-resources-sub {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-academic-people {
+    margin-top: 3em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.academic-contact-info-pane {
+    width: 80em;
+    background-color: rgb(243, 243, 211);
+    border-radius: 0.5em;
+}

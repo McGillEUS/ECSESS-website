@@ -1,0 +1,31 @@
+.entity-screen {
+    justify-content: center;
+    align-items: center;
+    height: 25em;
+    width: 80em;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-left: 10em;
+    margin-right: 10em;
+    border-radius: 0.5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-color: rgb(243, 243, 211);
+    text-align: center;
+}
+
+.entity-screen-cover-photo {
+    width: 50%;
+    position: relative;
+    margin-right: 0.5em;
+    margin-left: 2.5em;
+}
+
+.entity-screen-description {
+    width: 50%;
+    margin-left: 0.5em;
+    margin-right: 2.5em;
+}
