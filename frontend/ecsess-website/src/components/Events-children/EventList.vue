@@ -3,23 +3,19 @@
         <div id="subtitle" class="subtitle">
             <h2>ECSESS Events you NEED to see!</h2>
         </div>
-        <div id="events-list" class="events-list">
-            <li id="event-item" class="event-item" v-for="event in events" :key="event">
-                <!-- TODO add the text/pic and hover variations after -->
-                <div id="event-item-pic" class="event-item-pic">
-                    <h3>
-                        {{event.name}}
-                    </h3>
-                </div>
-            </li>
+        <div v-for="event in events" :key="event.name">
+            <!-- TODO add the text/pic and hover variations after -->
+            <EntityPanel :entity="event"/>
         </div>
     </div>
 </template>
 
 <script>
+import EntityPanel from "../General-children/EntityPanel";
+
 export default {
     name: "EventList",
-    components: {},
+    components: { EntityPanel },
     data() {
         return {events: []}
     },
@@ -28,11 +24,11 @@ export default {
     },
     mounted() {
         this.events = [
-            {name: "ECSESS Banquet", semester: "Fall & Winter", pic: "no link found", blurb: "no blurb found", secondPic: "none"},
-            {name: "Academic Forum", semester: "idk", pic: "no link found", blurb: "no blurb found", secondPic: "none"},
-            {name: "ECSEscapade", semester: "idk", pic: "no link found", blurb: "no blurb found", secondPic: "none"},
-            {name: "Blues Pub", semester: "Every Friday", pic: "no link found", blurb: "no blurb found", secondPic: "none"},
-            {name: "Coffee House", semester: "Sometimes", pic: "no link found", blurb: "no blurb found", secondPic: "none"}
+            {name: "ECSESS Banquet", semester: "Fall & Winter", photo: "temp.jpg", blurb: "no blurb found", secondPic: "none", id: 0},
+            {name: "Academic Forum", semester: "idk", photo: "semiconductors.jpg", blurb: "no blurb found", secondPic: "none", id: 1},
+            {name: "ECSEscapade", semester: "idk", photo: "semiconductors.jpg", blurb: "no blurb found", secondPic: "none", id: 2},
+            {name: "Blues Pub", semester: "Every Friday", photo: "temp.jpg", blurb: "no blurb found", secondPic: "none", id: 3},
+            {name: "Coffee House", semester: "Sometimes", photo: "temp.jpg", blurb: "no blurb found", secondPic: "none", id: 4}
         ]
     }
 }
@@ -41,60 +37,5 @@ export default {
 <style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-
-    .subtitle {
-        text-align: center;
-        padding-top: 4%;
-        padding-bottom: 4%;
-        background-color: rgb(243, 243, 211)
-
-    }
-
-    h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 160%;
-        font-weight: 400;
-        color: darkgreen;
-    }
-
-    .events-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 5em;
-        overflow: hidden;
-    }
-
-    .event-item {
-        all: unset;
-        width: 33%;
-        text-align: center;
-        padding: 1em;
-        color: white;
-    }
-
-    .event-item-pic {
-        margin-top: 1em;
-        margin-bottom: 1em;
-        padding-top: 30%;
-        padding-bottom: 30%;
-        padding-left: 10%;
-        padding-right: 10%;
-        border-radius: 0.5em;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        transition: all 0.3s;
-
-    }
-
-    #event-item-pic:hover {
-        //TODO switch pics 
-    }
-
-    #event-item-pic {
-        background-image: url('../../assets/semiconductors.jpg');
-    }
 
 </style>

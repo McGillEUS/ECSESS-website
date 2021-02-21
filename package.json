@@ -4,9 +4,9 @@
   "description": "Official ECSESS website",
   "main": "server.js",
   "scripts": {
-    "server": "cd backend && npm run start",
-    "client": "cd frontend/ecsess-website && npm run serve",
-    "start": "concurrently \"npm run server\" \"npm run client\" ",
+    "server": "cd backend && npm install && npm run start",
+    "client": "cd frontend/ecsess-website && npm install && npm run --silent serve",
+    "start": "concurrently \"npm run --silent server\" \"npm run --silent client\" ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

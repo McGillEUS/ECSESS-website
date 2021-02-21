@@ -3,7 +3,6 @@
 @import "./style-components/mainImage.scss";
 @import "./style-components/title.scss";
 @import "./style-components/pageBody.scss";
-@import "./style-components/entityPanel.scss";
 @import "./style-components/images.scss";
 @import "./style-components/member.scss";
 @import "./style-components/form.scss";
@@ -24,7 +23,7 @@
 }
 
 .academic-contact-info-pane {
-    width: 80em;
+    width: 80vw;
     background-color: rgb(243, 243, 211);
     border-radius: 0.5em;
 }

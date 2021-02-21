@@ -3,26 +3,8 @@
         <div id="subtitle" class="subtitle">
             <h2>Academic Resources</h2>
         </div>
-        <div id="academic-resources" class="academic-resources-sub">
-            <div id="featured-acad-resources" class="entity-screen">
-                <div id="featured-acad-cover-photo" class="entity-screen-cover-photo">
-                    <div class="img-container">
-                        <img src="../../assets/semiconductors.jpg" alt="featured-academic" class="large-img">
-                    </div>
-                    <h3 id="acad-resource-text" class="imgtext">Academic Forum</h3>
-                </div>
-                <div id="featured-acad-description" class="entity-screen-description">
-                    <div>
-                        <p>
-                            Placeholder text
-                        </p>
-                        <br><br>
-                        <button>
-                            ye
-                        </button>
-                    </div>
-                </div>
-            </div>
+        <div id="academic-resources" v-for="acadResource in acadResources" :key="acadResource.name">
+            <EntityPanel :entity="acadResource"/>
         </div>
         <div id="subtitle" class="subtitle">
             <h2>Raise your Academic Concerns</h2>
@@ -63,16 +45,21 @@
 </template>
 
 <script>
+import EntityPanel from "../General-children/EntityPanel"
+
 export default {
     name: "AcademicResources",
-    components: {},
+    components: { EntityPanel },
     data() {
         return {
             acadMembers: [
                 {id: 0, name: "Kenz Zaghib", position: "VP Academic of ECSESS", photo: 'temp.jpg'},
                 {id: 1, name: "eee", position: "Academic Advisor", photo: 'temp.jpg'},
-                {id: 2, name: "Melissa Hawley", position: "VP Administration", photo: 'temp.jpg'}
+                {id: 2, name: "ooo", position: "VP Administration", photo: 'temp.jpg'}
                 ], 
+            acadResources: [
+                {name: "Academic Forum", semester: "idk", photo: "temp.jpg", blurb: "no blurb found", secondPic: "none", id: 0},
+            ]
         }
     },
     methods: {

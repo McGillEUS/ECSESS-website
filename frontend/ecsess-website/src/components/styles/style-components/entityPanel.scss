@@ -1,8 +1,15 @@
+.entity-wrapper {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
 .entity-screen {
     justify-content: center;
     align-items: center;
-    height: 25em;
-    width: 80em;
+    height: 40%;
+    width: 60vw;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -17,15 +24,33 @@
     text-align: center;
 }
 
-.entity-screen-cover-photo {
+.entity-screen-cover-photo-even {
     width: 50%;
     position: relative;
     margin-right: 0.5em;
     margin-left: 2.5em;
 }
 
-.entity-screen-description {
+.entity-screen-description-even {
     width: 50%;
     margin-left: 0.5em;
     margin-right: 2.5em;
+}
+
+.entity-screen-cover-photo-odd {
+    width: 50%;
+    position: relative;
+    margin-right: 2.5em;
+    margin-left: 0.5em;
+}
+
+.entity-screen-description-odd {
+    width: 50%;
+    margin-left: 2.5em;
+    margin-right: 0.5em;
+}
+
+.large-img {
+    width: 100%;
+    border-radius: 0.5em;
 }

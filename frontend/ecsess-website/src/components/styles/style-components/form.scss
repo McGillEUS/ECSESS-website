@@ -7,6 +7,10 @@
     margin-top: 1em;
     margin-left: 2em;
     margin-right: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
 
     .formulate-input-label {
       // global label styles
@@ -49,7 +53,7 @@
         all: unset;
         background-color: white;
         height: 2em;
-        width: 22.8em;
+        width: auto;
         font-size: 120%;
         font-weight: 300;
         border-radius: 0.5em;
@@ -78,12 +82,10 @@
         all: unset;
         background-color: white;
         height: 20em;
-        width: 60em;
+        width: 100%;
         font-size: 100%;
         font-weight: 400;
         border-radius: 0.5em;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
         padding-top: 0.5em;
         margin-top: 0.5em;
         margin-bottom: 0.5em;
@@ -180,11 +182,9 @@
 }
 
 #subject {
-    width: 50em;
 }
 
 #email {
-    width: 50em;
 }
 
 #send-message {
