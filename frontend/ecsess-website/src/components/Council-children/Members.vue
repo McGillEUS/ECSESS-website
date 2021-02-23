@@ -13,7 +13,11 @@
                     <li id="council-member" class="member" v-for="execMember in execMembers" :key="execMember.name">
                         <div id="council-member-panel" class="member-panel">
                             <img id="council-member-pic" class="member-pic" v-bind:src="require(`../../assets/${execMember.photo}`)"/>
-                            <p id="member-name" class="member-name">{{execMember.name}}</p>
+                            <p id="member-name" class="member-name"><b>{{execMember.name}}</b></p>
+                            <br>
+                            <p id="member-role" class="member-role"><i>{{execMember.position}}</i></p>
+                            <br>
+                            <a :href="'mailto:' + execMember.email"><p id="member-email" class="member-email">Contact {{execMember.email}}</p></a>
                         </div>
                     </li>
                 </ul>
@@ -26,7 +30,11 @@
                     <li id="council-member" class="member" v-for="repMember in repMembers" :key="repMember.name">
                         <div id="council-member-panel" class="member-panel">
                             <img id="council-member-pic" class="member-pic" v-bind:src="require(`../../assets/${repMember.photo}`)"/>
-                            <p id="member-name" class="member-name">{{repMember.name}}</p>
+                            <p id="member-name" class="member-name"><b>{{repMember.name}}</b></p>
+                            <br>
+                            <p id="member-role" class="member-role"><i>{{repMember.position}}</i></p>
+                            <br>
+                            <a :href="'mailto:' + repMember.email"><p id="member-email" class="member-email">Contact {{repMember.email}}</p></a>
                         </div>
                     </li>
                 </ul>
@@ -42,14 +50,14 @@ export default {
     data: function () {
         return {
             execMembers: [
-                {id: 0, name: "Dafne Culha", position: "President", photo: 'temp.jpg'},
-                {id: 1, name: "Kenz Zaghib", position: "VP Academic", photo: 'temp.jpg'},
-                {id: 2, name: "Ricky Liu", position: "VP Communications", photo: 'temp.jpg'},
-                {id: 3, name: "Melissa Hawley", position: "VP Administration", photo: 'temp.jpg'},
-                {id: 4, name: "Katie Younge", position: "VP External", photo: 'temp.jpg'},
-                {id: 5, name: "Alena Midgen", position: "VP Internal", photo: 'temp.jpg'},
-                {id: 6, name: "Ali Tahmasebi", position: "VP Finance", photo: 'temp.jpg'},
-                {id: 7, name: "Alex Lam", position: "VP Tech Dev", photo: 'temp.jpg'}
+                {id: 0, name: "Dafne Culha", position: "President", photo: 'temp.jpg', email: "ecsess.president@mcgilleus.ca"},
+                {id: 1, name: "Kenz Zaghib", position: "VP Academic", photo: 'temp.jpg', email: "ecsess.vpacademic@mcgilleus.ca"},
+                {id: 2, name: "Ricky Liu", position: "VP Communications", photo: 'temp.jpg', email: "ecsess.vpcomm@mcgilleus.ca"},
+                {id: 3, name: "Melissa Hawley", position: "VP Administration", photo: 'temp.jpg', email: "ecsess.vpadmin@mcgilleus.ca"},
+                {id: 4, name: "Katie Younge", position: "VP External", photo: 'temp.jpg', email: "ecsess.vpexternal@mcgilleus.ca"},
+                {id: 5, name: "Alena Midgen", position: "VP Internal", photo: 'temp.jpg', email: "ecsess.vpinternal@mcgilleus.ca"},
+                {id: 6, name: "Ali Tahmasebi", position: "VP Finance", photo: 'temp.jpg', email: "ecsess.vpfinance@mcgilleus.ca"},
+                {id: 7, name: "Alex Lam", position: "VP Tech Dev", photo: 'temp.jpg', email: "ecsess.vptech@mcgilleus.ca"}
                 ], 
 
             repMembers: []}
@@ -59,18 +67,19 @@ export default {
     created () {
 
         this.repMembers = [
-                {id: 0, name: "Hyun Su An", position: "U4 Software Rep", photo: 'temp.jpg'},
-                {id: 1, name: "Marie Guertin", position: "U4 Computer Rep", photo: 'temp.jpg'},
-                {id: 2, name: "Laurie Zaccarin", position: "U4 Electrical Rep", photo: 'temp.jpg'},
-                {id: 3, name: "Nicolas Bieber", position: "U3 Software Rep", photo: 'temp.jpg'},
-                {id: 4, name: "Catherine Caron", position: "U3 Computer Rep", photo: 'temp.jpg'},
-                {id: 5, name: "Julie Bellia", position: "U3 Electrical Rep", photo: 'temp.jpg'},
-                {id: 6, name: "Adel Ahram", position: "U2 Software Rep", photo: 'temp.jpg'},
-                {id: 7, name: "Benjamin St-Laurent", position: "U2 Computer Rep", photo: 'temp.jpg'},
-                {id: 8, name: "Matthew Zeitouni", position: "U2 Electrical Rep", photo: 'temp.jpg'},
-                {id: 9, name: "Charles Lapierre", position: "U1 Software Rep", photo: 'temp.jpg'},
-                {id: 10, name: "Arman Shroff-Mehrabadi", position: "U1 Computer Rep", photo: 'temp.jpg'},
-                {id: 11, name: "Alondra Karam", position: "U1 Electrical Rep", photo: 'temp.jpg'}, 
+                {id: 0, name: "Hyun Su An", position: "U4 Software Rep", photo: 'temp.jpg', email: "software.u4rep@mcgilleus.ca"},
+                {id: 1, name: "Marie Guertin", position: "U4 Computer Rep", photo: 'temp.jpg', email: "computer.u4rep@mcgilleus.ca"},
+                {id: 2, name: "Laurie Zaccarin", position: "U4 Electrical Rep", photo: 'temp.jpg', email: "electrical.u4rep@mcgilleus.ca"},
+                {id: 3, name: "Nicolas Bieber", position: "U3 Software Rep", photo: 'temp.jpg', email: "software.u3rep@mcgilleus.ca"},
+                {id: 4, name: "Catherine Caron", position: "U3 Computer Rep", photo: 'temp.jpg', email: "computer.u3rep@mcgilleus.ca"},
+                {id: 5, name: "Julie Bellia", position: "U3 Electrical Rep", photo: 'temp.jpg', email: "electrical.u3rep@mcgilleus.ca"},
+                {id: 6, name: "Adel Ahram", position: "U2 Software Rep", photo: 'temp.jpg', email: "software.u2rep@mcgilleus.ca"},
+                {id: 7, name: "Benjamin St-Laurent", position: "U2 Computer Rep", photo: 'temp.jpg', email: "computer.u2rep@mcgilleus.ca"},
+                {id: 8, name: "Matthew Zeitouni", position: "U2 Electrical Rep", photo: 'temp.jpg', email: "electrical.u2rep@mcgilleus.ca"},
+                {id: 9, name: "Charles Lapierre", position: "U1 Software Rep", photo: 'temp.jpg', email: "software.u1rep@mcgilleus.ca"},
+                {id: 10, name: "Arman Shroff-Mehrabadi", position: "U1 Computer Rep", photo: 'temp.jpg', email: "computer.u1rep@mcgilleus.ca"},
+                {id: 11, name: "Alondra Karam", position: "U1 Electrical Rep", photo: 'temp.jpg', email: "electrical.u1rep@mcgilleus.ca"},
+                {id: 12, name: "Ryan Reszetnik", position: "U0 Rep", photo: 'temp.jpg', email: "ecsess.u0rep@mgcilleus.ca"}
             ]
     }
 }

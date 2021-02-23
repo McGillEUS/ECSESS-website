@@ -21,11 +21,11 @@ export default {
     },
     mounted() {
         this.events = [
-            {name: "ECSESS Banquet", semester: "Fall & Winter", id: 0, image: "semiconductors.jpg"},
-            {name: "Academic Forum", semester: "idk", id: 1, image: "funds-featured.jpg"},
-            {name: "ECSEscapade", semester: "idk", id: 2, image: "semiconductors.jpg"},
-            {name: "Blues Pub", semester: "Every Friday", id: 3, image: "semiconductors.jpg"},
-            {name: "Coffee House", semester: "Sometimes", id: 4, image: "semiconductors.jpg"}
+            {name: "ECSESS Banquet", semester: "Fall & Winter", id: 0, image: "ECSESS-Banquet-F2019.jpg"},
+            {name: "Academic Forum", semester: "idk", id: 1, image: "acad-forum.png"},
+            {name: "ECSEscapade", semester: "idk", id: 2, image: "ECSESSCapade_2017_in_Toronto.jpg"},
+            {name: "CodeJam", semester: "Every Friday", id: 3, image: "codejam2019.jpg"},
+            {name: "Coffee House", semester: "Sometimes", id: 4, image: "300px-Coffee_House_2014.jpg"}
         ]
     }
 }

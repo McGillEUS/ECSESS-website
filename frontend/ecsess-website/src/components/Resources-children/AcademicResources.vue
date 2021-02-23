@@ -28,10 +28,8 @@
             </div>
             <div id="academic-contact-info-pane" class="academic-contact-info-pane">
                 <div id="academic-contact-form-sender" class="form-wrapper">
-                    <div class="form-row">
                         <FormulateInput type="text" name="First name" validation="required" class="form-input" label="What is your first name?"/>
                         <FormulateInput type="text" name="Last name" validation="required" class="form-input" label="What is your last name?"/>                    
-                    </div>
                     <FormulateInput type="email" name="Your email" id="email" validation="required|email" class="form-input" label="What is your McGill email?"/>
                     <FormulateInput type="text" name="subject" id="subject" validation="required" class="form-input" label="Message subject"/>
                     <FormulateInput type="textarea" name="message" validation="required" class="form-input" label="Type your message here"/>

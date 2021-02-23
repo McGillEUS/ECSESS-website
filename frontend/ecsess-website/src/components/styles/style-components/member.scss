@@ -7,7 +7,7 @@
 
 .member-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 33%);
     grid-auto-rows: minmax(3em, auto);
     list-style: none;
 }
@@ -23,7 +23,8 @@
     padding: 1em;
     align-content: center;
     text-align: center;
-    width: 15em;
+    width: 20em;
+    overflow-wrap:break-word;
 }
 
 .member-name {
@@ -34,4 +35,20 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+.member-role {
+}
+
+.member-email{
+    
+    color: darkgreen;
+    font-weight: 400;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    transition: all 0.3s;
+}
+
+.member-email:hover {
+    background-color: rgb(205, 241, 188);
 }

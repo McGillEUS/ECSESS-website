@@ -41,4 +41,8 @@ body {
   transition: ease-in-out 0.3s;
 }
 
+a {
+    text-decoration: none;
+}
+
 </style>
