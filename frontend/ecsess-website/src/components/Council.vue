@@ -2,6 +2,7 @@
     <div id="council" class="council">
         <CouncilMainImage id="main-image" class="main-image"/>
         <div id="council-page-body" class="page-body">
+            <CouncilIndex/>
             <Members id="members" class="members"/>
         </div>
     </div>
@@ -10,10 +11,11 @@
 <script>
 import Members from './Council-children/Members'
 import CouncilMainImage from './Council-children/CouncilMainImage'
+import CouncilIndex from './Council-children/CouncilIndex'
 
 export default {
     name: "Council",
-    components: {Members, CouncilMainImage},
+    components: {Members, CouncilMainImage, CouncilIndex},
 
 }
 </script>

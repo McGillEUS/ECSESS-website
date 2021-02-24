@@ -35,9 +35,13 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+    transition: all 0.3s;
 }
 
-.member-role {
+.member-blurb {
+    position: absolute;
+    color: white;
+    transition: all 0.3s;
 }
 
 .member-email{
@@ -51,4 +55,15 @@
 
 .member-email:hover {
     background-color: rgb(205, 241, 188);
+}
+
+.image-description-flip-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex; // make us of Flexbox
+  align-items: center; // does vertically center the desired content
+  justify-content: center; // horizontally centers single line items
+  text-align: center; // optional, but helps horizontally center text that breaks into multiple lines
+  transition: all 0.3s;
+  margin-bottom: 1em;
 }
