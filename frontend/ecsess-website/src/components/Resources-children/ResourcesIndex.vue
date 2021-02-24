@@ -3,7 +3,7 @@
         <div id="subtitle" class="subtitle">
             <h2>What do you need today?</h2>
         </div>
-        <Slideshow :items="events"/>
+        <Slideshow :items="resourceTypes"/>
     </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
     components: { Slideshow },
     data () {
         return {
-            events: [
+            resourceTypes: [
             {name: "Available Academic Resources", id: 0, image: "temp.jpg"},
             {name: "Contact VP Academic/Other Academic Staff", id: 1, image: "temp.jpg"},
             {name: "Mental Health Resources", id: 2, image: "temp.jpg"},

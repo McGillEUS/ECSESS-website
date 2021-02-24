@@ -2,6 +2,7 @@
     <div id="events" class="events">
         <EventsMainImage id="main-image" class="main-image"/>
         <div id="event-page-body" class="page-body">
+            <EventIndex/>
            <EventList id="eventList" class="eventList"/>
         </div>
     </div>
@@ -10,10 +11,11 @@
 <script>
     import EventsMainImage from "./Events-children/EventsMainImage.vue"
     import EventList from "./Events-children/EventList.vue"
+    import EventIndex from "./Events-children/EventIndex.vue"
 
     export default {
         name: "Events",
-        components: {EventsMainImage, EventList},
+        components: {EventsMainImage, EventList, EventIndex},
         methods: {},
         created() {
             window.addEventListener("scroll", function () {

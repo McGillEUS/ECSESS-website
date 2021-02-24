@@ -1,7 +1,7 @@
 .slideshow-display {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     padding-top: 3em;
     padding-bottom: 3em;
@@ -19,12 +19,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
-    transition: all 0.3s;
+
 }
 
-.slideshow:hover {
+.slideshow-main-panel-wrapper:hover {
     transform: scale(1.1);
 }
 
@@ -42,6 +42,65 @@
 .panel-image {
     width: 80%;
     background-size: cover;
+    background: transparent no-repeat center;
+    border-radius: 0.5em;
+    -webkit-filter: brightness(50%);
+    -moz-filter: brightness(50%);
+    -o-filter: brightness(50%);
+    -ms-filter: brightness(50%);
+    filter: brightness(50%);
+}
+
+.slideshow-main-panel-wrapper {
+    display: flex; // make us of Flexbox
+    align-items: center; // does vertically center the desired content
+    justify-content: center; // horizontally centers single line items
+    text-align: center; // optional, but helps horizontally center text that breaks into multiple lines
+    transition: all 0.3s;
+    margin-bottom: 0.5em;
+}
+
+.slideshow-panel-subelements {
+    display: none;
+    height: 0em;
+    transition: all 0.3s;
+}
+
+.subElement {
+    all: unset;
+    height: 36px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align: center;
+    padding: 0;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.subpanel-button {
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 0.5em;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 100;
+}
+
+.subElement:hover {
+    transform: scale(1.1);
+}
+
+.subpanel-image {
+    background-size: cover;
+    height: 36px;
+    width: 80%;
     background: transparent no-repeat center;
     border-radius: 0.5em;
     -webkit-filter: brightness(50%);

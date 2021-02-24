@@ -1,7 +1,7 @@
 <template>
     <div>
         <div id="subtitle" class="subtitle">
-            <h2>ECSESS Events you NEED to see!</h2>
+            <h2>ECSESS Events</h2>
         </div>
         <div v-for="event in events" :key="event.name">
             <!-- TODO add the text/pic and hover variations after -->
