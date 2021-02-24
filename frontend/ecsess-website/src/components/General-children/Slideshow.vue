@@ -16,7 +16,9 @@
                             {{subElement.name}}
                         </h4>
                     </div>
-                    <img class="subpanel-image" v-bind:src="require('../../assets/'+subElement.image)"/>
+                    <div class="subpanel-image-wrapper">
+                        <img class="subpanel-image" v-bind:src="require('../../assets/'+subElement.image)"/>
+                    </div>
                 </div>
             </div>
         </li>
@@ -39,7 +41,7 @@ export default {
                 //open/close subelements if there are some
                 let maxHeight = item.subElements.length*40;
                 if (document.getElementById("slideshow-panel-subelement-" + item.name).style.opacity === "0") {
-                    document.getElementById("slideshow-panel-subelement-" + item.name).style.display = "inline";
+                    document.getElementById("slideshow-panel-subelement-" + item.name).style.display = "flex";
 
                     let x = parseInt(document.getElementById("slideshow-panel-subelement-" + item.name).offsetHeight);
                     console.log("yee: " + x + " maxheee: " + maxHeight)
