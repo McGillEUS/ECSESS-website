@@ -35,7 +35,13 @@ export default {
             
             if (item.subElements === undefined) {
                 //go to item if there are no sub-elements
-                
+                const element = {
+                    image: item.image,
+                    name: item.name,
+                    blurb: item.blurb !== undefined ? item.blurb : ""
+                };
+                console.log(element);
+                this.$router.push({ path: `/element/${element}`, params: { element } })
 
             } else {
                 //open/close subelements if there are some

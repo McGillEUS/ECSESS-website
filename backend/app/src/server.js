@@ -14,10 +14,10 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const router = require("./api/api");
 const config = require("./config/config");
-const sequelize = require("sequelize");
+const sequelize = require("./sequelize");
+const { Sequelize } = require("sequelize");
 
 //helper module imports
-
 
 /**
  * MIDDLEWARE
@@ -47,6 +47,9 @@ app.use("/api", router);
 app.get("/", (req, res) => {
     res.send("Hi!");
 });
+
+//initialize sequelize
+module.exports = sequelize(Sequelize, config);
 
 //START SERVER FOR API
 const server = http.createServer(app);

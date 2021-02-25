@@ -10,7 +10,8 @@
   "author": "Ricky Liu & Adel Ahram",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -19,6 +20,8 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mocha": "^8.2.1",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
     "request": "^2.88.2",
     "sequelize": "^6.5.0"
   }

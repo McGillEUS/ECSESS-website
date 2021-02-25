@@ -6,6 +6,7 @@ const Resources = () => import('../components/Resources.vue')
 const Photos = () => import('../components/Photos.vue')
 const FYC = () => import('../components/ECSESSBits.vue')
 const StudentSpaces = () => import('../components/StudentSpaces.vue')
+const ElementView = () => import('../components/General-children/ElementView.vue');
 
 
 const routes = [
@@ -16,7 +17,8 @@ const routes = [
     {path: '/resources', component:  Resources},
     {path: '/photos', component: Photos},
     {path: '/bits', component: FYC},
-    {path: '/spaces', component: StudentSpaces}
+    {path: '/spaces', component: StudentSpaces},
+    {path: '/element/:element', component: ElementView, props: true}
 ]
 
 export default routes
