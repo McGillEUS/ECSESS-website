@@ -1,10 +1,13 @@
-.main-image {
+.mainimage {
     width: 100%;
     height: 100vh;
-    padding-top: 50vh;
-    padding-bottom: 50vh;
     text-align: center;
     z-index: -2;
-    position: fixed;
+    position: relative;
     background-color: lightyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
   }

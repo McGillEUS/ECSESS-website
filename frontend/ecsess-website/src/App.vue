@@ -17,8 +17,9 @@ export default {
   components: {NavBar},
   created() {
     window.addEventListener("scroll", function () {
-      document.getElementById("main-image").style.opacity =
-        1 - 0.005 * window.scrollY;
+        if (this.document.getElementById("main-image") !== null) {
+            document.getElementById("main-image").style.opacity = 1 - 0.005 * window.scrollY;
+        }
     });
   },
 }

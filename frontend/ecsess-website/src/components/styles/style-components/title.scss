@@ -1,6 +1,5 @@
 h1 {
     all: unset;
-    width: 100%;
     font-family: "Montserrat", sans-serif;
     font-size: 200%;
     font-weight: 500;
@@ -8,4 +7,9 @@ h1 {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+    position: absolute;
   }
+
+.white-h1 {
+  color: white;
+}

@@ -1,6 +1,6 @@
 <template>
     <div id="FYC" class="FYC">
-        <FYCMainImage id="main-image" class="main-image"/>
+        <FYCMainImage id="main-image"/>
         <div id="FYC-content" class="FYC-content">
             
         </div>

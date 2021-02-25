@@ -37,7 +37,13 @@ h5 {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+
     }
+
+.main-image-h5 {
+    position: absolute;
+    transform: translateY(3em);
+}
 
     h3 {
         font-family: 'Montserrat';

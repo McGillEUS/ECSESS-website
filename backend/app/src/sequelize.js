@@ -1,6 +1,8 @@
 //db module imports
 const EventModel = require("./model/Event");
 const EventCategoryModel = require("./model/EventCategory");
+const ResourceModel = require("./model/Resource");
+const PersonModel = require("./model/Person");
 
 module.exports = function(Sequelize, config) {
     //DB connection
@@ -25,14 +27,16 @@ module.exports = function(Sequelize, config) {
     //setup DB tables
     const Event = EventModel(sequelize, Sequelize);
     const EventCategory = EventCategoryModel(sequelize, Sequelize);
+    const Resource = ResourceModel(sequelize, Sequelize);
+    const Person = PersonModel(sequelize, Sequelize);
 
     EventCategory.hasMany(Event);
     Event.belongsTo(EventCategory);
 
-    sequelize.sync({ force: true })
+    /*sequelize.sync({ force: true })
     .then(() => {
         console.log(`Database & tables created!`)
-    })
+    })*/
 
-    return { Event, EventCategory };
+    return { Event, EventCategory, Resource, Person };
 }

@@ -1,6 +1,6 @@
 <template>
     <div id="resources" class="resources">
-        <ResourcesMainImage id="main-image" class="main-image"/>
+        <ResourcesMainImage id="main-image"/>
         <div id="resources-page-body" class="page-body">
             <ResourcesIndex/>
             <AcademicResources id="academic-resources" class="academic-resources"/>

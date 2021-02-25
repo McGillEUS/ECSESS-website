@@ -16,7 +16,7 @@ export default {
     data () {
         return {
             eventTypes: [
-            {name: "Social Events", id: 0, image: "temp.jpg", subElements: [{name: "First Year Welcome Party", image: "temp.jpg"}, {name: "Coffee House", image: "temp.jpg"}, {name: "Pancake Breakfast", image: "temp.jpg"}, {name: "Blues Pub", image: "temp.jpg"}, {name: "Wine & Cheese", image: "temp.jpg"}, {name: "ECSESS Banquet", image: "temp.jpg"}, {name: "Apartment Crawls", image: "temp.jpg"}, {name: "Year Group Events", image: "temp.jpg"}]},
+            {name: "Social Events", id: 0, image: "temp.jpg", subElements: [{name: "First Year Welcome Party", id: 500, image: "temp.jpg"}, {name: "Coffee House", image: "temp.jpg"}, {name: "Pancake Breakfast", image: "temp.jpg"}, {name: "Blues Pub", image: "temp.jpg"}, {name: "Wine & Cheese", image: "temp.jpg"}, {name: "ECSESS Banquet", image: "temp.jpg"}, {name: "Apartment Crawls", image: "temp.jpg"}, {name: "Year Group Events", image: "temp.jpg"}]},
             {name: "Academic Events", id: 1, image: "temp.jpg", subElements: [{name: "Professor Speaker Series", image: "temp.jpg"}, {name: "Academic Forum", image: "temp.jpg"}, {name: 'DPM Social', image: "temp.jpg"}]},
             {name: "Networking Events", id: 2, image: "temp.jpg", subElements: [{name: "ECSESSCapade", image: "temp.jpg"}, {name: "Montreal Company Crawl", image: "temp.jpg"}, {name: 'Speed Networking', image: "temp.jpg"}]},
             {name: "Technical Events", id: 3, image: "temp.jpg", subElements: [{name: "Code.Jam()", image: "temp.jpg"}, {name: "Technical Workshops", image: "temp.jpg"}]},

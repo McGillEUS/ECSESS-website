@@ -1,6 +1,6 @@
 <template>
     <div id="events" class="events">
-        <EventsMainImage id="main-image" class="main-image"/>
+        <EventsMainImage id="main-image"/>
         <div id="event-page-body" class="page-body">
             <EventIndex/>
            <EventList id="eventList" class="eventList"/>
@@ -16,14 +16,7 @@
     export default {
         name: "Events",
         components: {EventsMainImage, EventList, EventIndex},
-        methods: {},
-        created() {
-            window.addEventListener("scroll", function () {
-            console.log(0.005 * window.scrollY);
-            document.getElementById("main-image").style.opacity =
-                1 - 0.005 * window.scrollY;
-            });
-        }
+        methods: {}
     }
 </script>
 

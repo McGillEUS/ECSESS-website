@@ -18,7 +18,7 @@ const routes = [
     {path: '/photos', component: Photos},
     {path: '/bits', component: FYC},
     {path: '/spaces', component: StudentSpaces},
-    {path: '/element/:element', component: ElementView, props: true}
+    {path: '/element/:elementId', component: ElementView}
 ]
 
 export default routes

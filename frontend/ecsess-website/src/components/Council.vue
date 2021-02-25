@@ -1,6 +1,6 @@
 <template>
     <div id="council" class="council">
-        <CouncilMainImage id="main-image" class="main-image"/>
+        <CouncilMainImage id="main-image"/>
         <div id="council-page-body" class="page-body">
             <CouncilIndex/>
             <Members id="members" class="members"/>

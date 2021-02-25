@@ -1,6 +1,6 @@
 <template>
     <div id="StudentSpaces" class="StudentSpaces">
-        <StudentSpacesMainImage id="main-image" class="main-image"/>
+        <StudentSpacesMainImage id="main-image"/>
         <div id="StudentSpaces-content" class="StudentSpaces-content">
             
         </div>

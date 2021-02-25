@@ -1,6 +1,6 @@
 <template>
     <div id="bursaries" class="bursaries">
-        <BursariesMainImage id="main-image" class="main-image"/>
+        <BursariesMainImage id="main-image"/>
         <div id="Bursaries-content" class="Bursaries-content">
             
         </div>

@@ -35,13 +35,7 @@ export default {
             
             if (item.subElements === undefined) {
                 //go to item if there are no sub-elements
-                const element = {
-                    image: item.image,
-                    name: item.name,
-                    blurb: item.blurb !== undefined ? item.blurb : ""
-                };
-                console.log(element);
-                this.$router.push({ path: `/element/${element}`, params: { element } })
+                this.$router.push({ path: `/element/${item.id}` })
 
             } else {
                 //open/close subelements if there are some
@@ -50,20 +44,16 @@ export default {
                     document.getElementById("slideshow-panel-subelement-" + item.name).style.display = "flex";
 
                     let x = parseInt(document.getElementById("slideshow-panel-subelement-" + item.name).offsetHeight);
-                    console.log("yee: " + x + " maxheee: " + maxHeight)
                     while (x < maxHeight) {
                         document.getElementById("slideshow-panel-subelement-" + item.name).style.height = x + "px";
-                        console.log(document.getElementById("slideshow-panel-subelement-" + item.name).style.height);
                         x++;
                     }
                     setTimeout(function(){document.getElementById("slideshow-panel-subelement-" + item.name).style.opacity = "1.0";}, 30);
                 } else {
                     document.getElementById("slideshow-panel-subelement-" + item.name).style.opacity = "0";
                     let x = parseInt(document.getElementById("slideshow-panel-subelement-" + item.name).clientHeight);
-                    console.log("yee: " + x + " maxheee: " + maxHeight)
                     while (x >= 0) {
-                        document.getElementById("slideshow-panel-subelement-" + item.name).style.height = x + "em";
-                        console.log(document.getElementById("slideshow-panel-subelement-" + item.name).style.height)
+                        document.getElementById("slideshow-panel-subelement-" + item.name).style.height = x + "px";
                         x--;
                     }
                     setTimeout(function(){document.getElementById("slideshow-panel-subelement-" + item.name).style.display = "none";}, 300);

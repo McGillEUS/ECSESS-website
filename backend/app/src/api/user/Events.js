@@ -5,10 +5,19 @@
 
 //IMPORTS
 const express = require("express");
-const { /** add business logic functions here */ } = require("../../controller/user/Events");
+const { getEvents, getEvent, getEventsByCategory, getCategories } = require("../../controller/user/Events");
 const router = express.Router();
 
 //ROUTE DEFINITIONS
+/* GET all events */
+router.get("/", getEvents);
+/* Get event by id */
+router.get("/:id", getEvent);
+/* Get event by event category id*/
+router.get("/bycategory/:id", getEventsByCategory);
 
+
+/* Get event categories */
+router.get("/categories", getCategories);
 
 module.exports = router;

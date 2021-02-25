@@ -1,6 +1,6 @@
 <template>
     <div id="photos" class="photos">
-        <PhotosMainImage id="main-image" class="main-image"/>
+        <PhotosMainImage id="main-image"/>
         <div id="Photos-content" class="Photos-content">
             
         </div>

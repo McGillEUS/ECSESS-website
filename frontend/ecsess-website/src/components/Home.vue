@@ -1,6 +1,6 @@
 <template>
   <div id="home-page" class="home-page">
-    <MainImage id="main-image" class="main-image" />
+    <MainImage id="main-image" />
     <div id="home-page-body" class="page-body">
       <AboutUs id="about-us" class="about-us" />
       <Resources id="resources" class="resources" />

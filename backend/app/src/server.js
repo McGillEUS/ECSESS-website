@@ -12,7 +12,6 @@ const express = require("express");
 const http = require("http");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const router = require("./api/api");
 const config = require("./config/config");
 const sequelize = require("./sequelize");
 const { Sequelize } = require("sequelize");
@@ -36,7 +35,13 @@ app.use(
 //BODYPARSER
 app.use(bodyParser.json());
 
+//initialize sequelize
+const models = sequelize(Sequelize, config);
+console.log(models);
+module.exports = models;
+
 //API ROUTES
+const router = require("./api/api");
 app.use("/api", router);
 
 //CONNECT TO STATIC FRONTEND BUILD
@@ -47,9 +52,6 @@ app.use("/api", router);
 app.get("/", (req, res) => {
     res.send("Hi!");
 });
-
-//initialize sequelize
-module.exports = sequelize(Sequelize, config);
 
 //START SERVER FOR API
 const server = http.createServer(app);

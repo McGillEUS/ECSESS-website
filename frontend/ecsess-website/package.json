@@ -7,8 +7,10 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "proxy": "http://localhost:8081",
   "dependencies": {
     "@braid/vue-formulate": "^2.5.0",
+    "axios": "^0.21.1",
     "buefy": "^0.9.4",
     "core-js": "^3.6.5",
     "jquery": "^3.5.1",
