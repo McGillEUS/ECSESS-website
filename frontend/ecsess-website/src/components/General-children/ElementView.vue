@@ -4,7 +4,7 @@
             <img class="element-image" :src="require('../../assets/'+element.image)" v-if="element.image != ''"/>
             <h1 class="white-h1">{{element.name}}</h1>
         </div>
-        <div class="element-body">
+        <div id="element-body" class="element-body">
             <h3>
                 {{element.blurb}}
             </h3>
@@ -36,6 +36,14 @@ export default {
             this.element.blurb = response.data.events.blurb;
         })
     },
+    created () {
+        window.addEventListener("scroll", function () {
+            if (window.scrollY <= 200 && document.getElementById("element-body") !== null) {
+                console.log(window.scrollY)
+                document.getElementById("element-body").style.top = (100 - window.scrollY / 4) + 'vh';
+            }
+    });
+    }
 }
 </script>
 

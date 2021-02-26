@@ -6,7 +6,8 @@
   "scripts": {
     "server": "cd backend && npm install && npm run start",
     "client": "cd frontend/ecsess-website && npm install && npm run --silent serve",
-    "start": "concurrently \"npm run --silent server\" \"npm run --silent client\" ",
+    "admin": "cd frontend/admin-panel && npm install && npm run start",
+    "start": "concurrently \"npm run --silent server\" \"npm run --silent client\" \"npm run --silent admin\" ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

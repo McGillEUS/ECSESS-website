@@ -5,9 +5,15 @@
 @import "./pageBody.scss";
 
 .element-image {
-    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
 .element-body {
+    position: absolute;
     height: 100vh;
+    top: 100vh;
+    z-index: 100;
+    background-color: lightyellow;
+    width: 100%;
 }
