@@ -1,0 +1,26 @@
+.dashboard-wrapper {
+    margin-left: 2em;
+    margin-right: 2em;
+    width: 90vw;
+    height: 100vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.dashboard-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.dashboard-title {
+    
+}
+
+.section-wrapper {
+    background-color: #242830;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 3em;
+    padding-top: 2em;
+    margin: 3em;
+}

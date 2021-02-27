@@ -3,9 +3,9 @@ import FormField from "./FormField";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-const EventsTab = () => {
+const EventCategoriesTab = () => {
 
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit } = useForm();
     const onSubmit = data => {
             data.image = data.image[0].name;
             axios.post("/api/admin/events/category", data);
@@ -23,4 +23,4 @@ const EventsTab = () => {
     );
 };
 
-export default EventsTab;
+export default EventCategoriesTab;

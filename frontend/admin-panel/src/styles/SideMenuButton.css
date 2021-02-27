@@ -1,0 +1,14 @@
+.sidemenu-button {
+    all: unset;
+    padding: 1em;
+    border-radius: 0.5em;    
+    transition: all ease 0.1s;
+    width: 80%;
+}
+
+.sidemenu-button-wrapper {
+}
+
+.sidemenu-button:hover {
+    background-color: #282c34;
+}

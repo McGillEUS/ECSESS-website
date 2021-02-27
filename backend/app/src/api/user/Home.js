@@ -5,10 +5,11 @@
 
 //IMPORTS
 const express = require("express");
-const { /** add business logic functions here */ } = require("../../controller/user/Home");
+const { getNews } = require("../../controller/user/Home");
 const router = express.Router();
 
 //ROUTE DEFINITIONS
-
+/* Get all News */
+router.get("/news", getNews);
 
 module.exports = router;

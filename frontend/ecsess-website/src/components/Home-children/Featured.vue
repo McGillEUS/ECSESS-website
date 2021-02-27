@@ -6,7 +6,7 @@
         </div>
         <carousel>
             <slide v-for="(slide, i) in slides" :key="i" class="carousel-slide">
-                <img :src="require('../../assets/'+slide.photo)" alt="" class="carousel-img">
+                <img :src="require('../../assets/'+slide.image)" alt="" class="carousel-img">
                 <h3 class="carousel-text">{{slide.name}}</h3>
             </slide>
         </carousel>
@@ -15,21 +15,21 @@
 
 <script>
 import { Carousel, Slide } from 'vue-carousel';
+import axios from 'axios';
 
 export default {
     name: "Featured",
     components: { Carousel, Slide },
     data: () => (
-        {slides: [
-            {name: "eee", photo: "temp.jpg", blurb: "hi!", id: "0"},
-            {name: "eeee", photo: "temp.jpg", blurb: "hi!", id: "1"},
-            {name: "eeeee", photo: "temp.jpg", blurb: "hi!", id: "1"},
-        ]}
+        {slides: []}
     ),
     methods: {
     
     },
-    mounted() {
+    created () {
+        axios.get("/api/user/home/news").then((news) => {
+            this.slides = news.data.news;
+        })
     }
 }
 </script>

@@ -5,10 +5,23 @@
 
 //IMPORTS
 const express = require("express");
-const { /** add business logic functions here */ } = require("../../controller/admin/Home");
+const { postNews, deleteNews, updateNews, getNews, getNewsById } = require("../../controller/admin/Home");
 const router = express.Router();
 
 //ROUTE DEFINITIONS
+/* Post News */
+router.post("/news", postNews);
 
+/* Update News */
+router.put("/news/:id", updateNews);
+
+/* Get all News */
+router.get("/news", getNews);
+
+/* Get News by Id */
+router.get("/news/:id", getNewsById);
+
+/* Delete News */
+router.delete("/news/:id", deleteNews);
 
 module.exports = router;

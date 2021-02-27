@@ -1,0 +1,17 @@
+.sidemenu-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: #242830;
+    height: 100vh;
+    font-size: 0.6em;
+    font-weight: 300;
+    text-align: left;
+    width: 10vw;
+}
+
+.sidemenu-padding {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}

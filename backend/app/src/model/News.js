@@ -1,11 +1,9 @@
 module.exports = function (sequelize, type) {
 
-    return sequelize.define('event', {
+    return sequelize.define('news', {
         name: { type:type.STRING },
-        semester: { type: type.STRING },
         image: { type: type.STRING },
         blurb: { type: type.TEXT },
-        secondImage: { type: type.STRING },
-        featured: { type: type.BOOLEAN }
+        link: { type: type.STRING }
     })
 }

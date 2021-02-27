@@ -1,4 +1,3 @@
-const { post } = require("../../api/api");
 const { getCategoriesService, postEventService, getCategoryByNameService, postCategoryService } = require("../../service/admin/Events");
 
 

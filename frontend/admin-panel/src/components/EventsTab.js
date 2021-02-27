@@ -5,7 +5,7 @@ import axios from "axios";
 
 const EventsTab = () => {
 
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         axios.get(`/api/admin/events/category/${data.event_category}`).then((response) => {
             data.event_category = response.data.categories[0].id;

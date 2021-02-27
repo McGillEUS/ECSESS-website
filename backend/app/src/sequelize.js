@@ -3,6 +3,7 @@ const EventModel = require("./model/Event");
 const EventCategoryModel = require("./model/EventCategory");
 const ResourceModel = require("./model/Resource");
 const PersonModel = require("./model/Person");
+const NewsModel = require("./model/News");
 
 module.exports = function(Sequelize, config) {
     //DB connection
@@ -29,6 +30,7 @@ module.exports = function(Sequelize, config) {
     const EventCategory = EventCategoryModel(sequelize, Sequelize);
     const Resource = ResourceModel(sequelize, Sequelize);
     const Person = PersonModel(sequelize, Sequelize);
+    const News = NewsModel(sequelize, Sequelize);
 
     EventCategory.hasMany(Event);
     Event.belongsTo(EventCategory);
@@ -38,5 +40,5 @@ module.exports = function(Sequelize, config) {
         console.log(`Database & tables created!`)
     })*/
 
-    return { Event, EventCategory, Resource, Person };
+    return { Event, EventCategory, Resource, Person, News };
 }

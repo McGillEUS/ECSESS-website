@@ -1,0 +1,42 @@
+.grid-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 33.3333%);
+    grid-auto-rows: minmax(3em, auto);
+    list-style: none;
+    width: 100%;
+}
+
+.grid-element {
+    margin-bottom: 3em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-panel {
+    background-color: rgb(243, 243, 211);
+    padding: 1em;
+    align-content: center;
+    text-align: center;
+    width: 20em;
+    overflow-wrap:break-word;
+}
+
+.grid-element-name {
+    font-family: 'Montserrat';
+}
+
+.grid-element-pic {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.3s;
+}
