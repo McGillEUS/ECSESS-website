@@ -1,7 +1,17 @@
 <template>
     <div class="slideshow-display">
         <li class="slideshow" v-for="item in items" :key="item.name">
-            <div class="slideshow-main-panel-wrapper" @click="goToItem(item)">
+            <a :href="'#' + item.href" v-if="navStyle === 'expand'" class="slideshow-a">
+                <div class="slideshow-main-panel-wrapper" @click="goToItem(item, navStyle)">
+                    <div class="panel-button" :id="'panel-' + item.id" >
+                        <h3>
+                            {{item.name}}
+                        </h3>
+                    </div>
+                    <img class="panel-image" v-bind:src="require('../../assets/'+item.image)"/>
+                </div>
+            </a>
+            <div class="slideshow-main-panel-wrapper" @click="goToItem(item, navStyle)" v-if="navStyle === 'route'">
                 <div class="panel-button" :id="'panel-' + item.id" >
                     <h3>
                         {{item.name}}
@@ -10,7 +20,7 @@
                 <img class="panel-image" v-bind:src="require('../../assets/'+item.image)"/>
             </div>
             <div :id="'slideshow-panel-subelement-' + item.name" class="slideshow-panel-subelements" style="opacity:0.0" v-if="item.subElements !== undefined">
-                <div class="subElement" v-for="subElement in item.subElements" :key="subElement.name" @click="goToItem(subElement)">
+                <div class="subElement" v-for="subElement in item.subElements" :key="subElement.name" @click="goToItem(subElement, navStyle)">
                     <div class="subpanel-button" :id="'panel-' + subElement.name" >
                         <h4>
                             {{subElement.name}}
@@ -28,14 +38,18 @@
 <script>
 export default {
     name: "Slideshow",
-    props: [ 'items' ],
+    props: [ 'items', 'navStyle' ],
     methods: {
-        goToItem: function (item) {
+        goToItem: function (item, navStyle) {
             
             
             if (item.subElements === undefined) {
                 //go to item if there are no sub-elements
-                this.$router.push({ path: `/element/${item.id}` })
+                if (navStyle === "route") {
+                    this.$router.push({ path: `/element/${item.id}` });
+                } else if (navStyle === "expand") {
+                    this.$emit('expand', item.name);
+                }
 
             } else {
                 //open/close subelements if there are some

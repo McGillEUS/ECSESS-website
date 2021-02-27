@@ -38,4 +38,16 @@ const getCategoryByNameService = async (name) => {
     }
 }
 
-module.exports = { getCategoriesService, postEventService, getCategoryByNameService };
+const postCategoryService = async (data) => {
+    try {
+        const eventCategory = await models.EventCategory.create({
+            name: data.event_category_name,
+            image: data.image,
+        })
+        return eventCategory;
+    } catch {
+        throw new Error("Cannot reach database");
+    }
+}
+
+module.exports = { getCategoriesService, postEventService, getCategoryByNameService, postCategoryService };

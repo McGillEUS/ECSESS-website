@@ -1,7 +1,7 @@
 <template>
     <div>
         <div id="subtitle" class="subtitle">
-            <h2>ECSESS Events</h2>
+            <h2>Browse ECSESS Events</h2>
         </div>
         <div v-for="event in events" :key="event.name">
             <!-- TODO add the text/pic and hover variations after -->
@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import EntityPanel from "../General-children/EntityPanel";
 
 export default {
@@ -22,14 +23,10 @@ export default {
     methods: {
     
     },
-    mounted() {
-        this.events = [
-            {name: "ECSESS Banquet", semester: "Fall & Winter", photo: "temp.jpg", blurb: "no blurb found", secondPic: "none", id: 0},
-            {name: "Academic Forum", semester: "idk", photo: "semiconductors.jpg", blurb: "no blurb found", secondPic: "none", id: 1},
-            {name: "ECSEscapade", semester: "idk", photo: "semiconductors.jpg", blurb: "no blurb found", secondPic: "none", id: 2},
-            {name: "Blues Pub", semester: "Every Friday", photo: "temp.jpg", blurb: "no blurb found", secondPic: "none", id: 3},
-            {name: "Coffee House", semester: "Sometimes", photo: "temp.jpg", blurb: "no blurb found", secondPic: "none", id: 4}
-        ]
+    created () {
+        axios.get('/api/user/events').then((events) => {
+            this.events = events.data.events;
+        })
     }
 }
 </script>

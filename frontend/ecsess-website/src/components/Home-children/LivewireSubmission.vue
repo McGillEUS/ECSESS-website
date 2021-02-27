@@ -1,31 +1,22 @@
 <template>
     <div>
         <div id="subtitle" class="subtitle">
-            <h2>Resources for you</h2>
+            <h2>Promote your event in our weekly newsletter!</h2>
         </div>
-        <Slideshow :items="resources"/>
+
     </div>
 </template>
 
 <script>
-import Slideshow from "../General-children/Slideshow";
 
 export default {
-    name: "Resources",
-    components: { Slideshow },
+    name: "LivewireSubmission",
     data() {
-        return {resources: []}
+        return {events: []}
     },
     methods: {
     
     },
-    mounted() {
-        this.resources = [
-            {name: "Ye", id: 0, image: "semiconductors.jpg"},
-            {name: "CodeJam", id: 1, image: "funds-featured.jpg"},
-            {name: "Yo", id: 2, image: "semiconductors.jpg"}
-        ]
-    }
 }
 </script>
 

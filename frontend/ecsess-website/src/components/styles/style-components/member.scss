@@ -7,15 +7,18 @@
 
 .member-list {
     display: grid;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(3, 33.3333%);
     grid-auto-rows: minmax(3em, auto);
     list-style: none;
+    width: 100%;
 }
 
 .member {
     margin-bottom: 3em;
     margin-left: 1.5em;
     margin-right: 1.5em;
+    display: flex;
+    justify-content: center;
 }
 
 .member-panel {

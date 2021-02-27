@@ -3,8 +3,8 @@
     <MainImage id="main-image" />
     <div id="home-page-body" class="page-body">
       <AboutUs id="about-us" class="about-us" />
-      <Resources id="resources" class="resources" />
-      <EventSlideshow id="eventslideshow" class="eventslideshow" />
+      <Featured id="featured" class="featured" />
+      <LivewireSubmission id="eventslideshow" class="eventslideshow" />
       <StayConnected id="stay-connected" class="stay-connected" />
       <Bottom id="bottom" class="bottom" />
       <!-- wow ricky u looking fine -->
@@ -16,8 +16,8 @@
 import AboutUs from "./Home-children/AboutUs";
 import MainImage from "./Home-children/MainImage";
 import StayConnected from "./Home-children/StayConnected";
-import Resources from "./Home-children/Resources";
-import EventSlideshow from "./Home-children/EventSlideshow";
+import Featured from "./Home-children/Featured";
+import LivewireSubmission from "./Home-children/LivewireSubmission";
 import Bottom from "./General-children/Bottom";
 
 export default {
@@ -26,8 +26,8 @@ export default {
     AboutUs,
     MainImage,
     StayConnected,
-    Resources,
-    EventSlideshow,
+    Featured,
+    LivewireSubmission,
     Bottom,
   },
   methods: {},

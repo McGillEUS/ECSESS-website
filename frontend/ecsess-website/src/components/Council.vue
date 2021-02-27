@@ -3,7 +3,9 @@
         <CouncilMainImage id="main-image"/>
         <div id="council-page-body" class="page-body">
             <CouncilIndex/>
-            <Members id="members" class="members"/>
+            <Members id="council-member-section" class="members"/>
+            <PublicDocuments id="public-documents-section"/>
+            <JoinCouncil id="join-council-section"/>
         </div>
     </div>
 </template>
@@ -12,11 +14,23 @@
 import Members from './Council-children/Members'
 import CouncilMainImage from './Council-children/CouncilMainImage'
 import CouncilIndex from './Council-children/CouncilIndex'
+import PublicDocuments from './Council-children/PublicDocuments'
+import JoinCouncil from './Council-children/JoinCouncil'
 
 export default {
     name: "Council",
-    components: {Members, CouncilMainImage, CouncilIndex},
-
+    components: {Members, CouncilMainImage, CouncilIndex, PublicDocuments, JoinCouncil},
+    data () {
+        return {
+            section: "",
+            toggle: ""
+        }
+    },
+    methods: {
+    },
+    created () {
+        window.scrollTo(0,0);
+    }
 }
 </script>
 

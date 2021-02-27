@@ -36,7 +36,7 @@ const getEventsByCategoryService = async (id) => {
     }
 }
 
-const getCategoriesService = async (id) => {
+const getCategoriesService = async () => {
     try {
         const categories = await models.EventCategory.findAll();
         return categories;

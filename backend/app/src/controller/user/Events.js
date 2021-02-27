@@ -74,17 +74,17 @@ const getEventsByCategory = async (req, res, next) => {
 
 const getCategories = async (req, res, next) => {
     try {
-        const categories = await getCategoriesService(req.params.id);
+        const categories = await getCategoriesService();
         if (categories) {
             return res.status(200).json({
                 success: true,
-                message: "fetched event successfully",
-                events: categories
+                message: "fetched categories successfully",
+                categories: categories
             })
         } else {
             return res.status(200).json({
                 success: true,
-                message: "there is no such event"
+                message: "there are no categories"
             })
         } 
     } catch {

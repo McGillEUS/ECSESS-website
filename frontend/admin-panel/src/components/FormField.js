@@ -20,7 +20,9 @@ const FormField = (props) => {
     let eventCategoryList = []
     if (props.type === "select") {
         const ECList = eventCategories;
-        eventCategoryList = (<option>{ECList.map(item => item.name)}</option>);
+        for (let i = 0; i < ECList.length; i++) {
+            eventCategoryList.push(<option>{ECList[i].name}</option>)
+        }
     }
 
     return (

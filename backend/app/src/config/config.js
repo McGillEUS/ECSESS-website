@@ -10,6 +10,10 @@ const {
     TESTPORT,
     BACKEND_DOMAIN,
     DATABASE_URL,
+    EMAILHOST,
+    EMAILPORT,
+    EMAILUSER,
+    EMAILPASS
 } = process.env;
 
 const config = {
@@ -21,6 +25,12 @@ const config = {
     database: {
         DATABASE_URL,
     },
+    email: {
+        EMAILHOST,
+        EMAILPORT,
+        EMAILUSER,
+        EMAILPASS
+    }
 };
 
 module.exports = config;

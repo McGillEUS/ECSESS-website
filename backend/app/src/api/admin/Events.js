@@ -5,7 +5,7 @@
 
 //IMPORTS
 const express = require("express");
-const { getCategories, postEvent, getCategoryByName } = require("../../controller/admin/Events");
+const { getCategories, postEvent, getCategoryByName, postCategory } = require("../../controller/admin/Events");
 const router = express.Router();
 
 //ROUTE DEFINITIONS
@@ -15,5 +15,7 @@ router.get("/categories", getCategories);
 router.post("/", postEvent)
 /* Get event category */
 router.get("/category/:name", getCategoryByName);
+/* Post event category */
+router.post("/category", postCategory);
 
 module.exports = router;

@@ -18,6 +18,6 @@ router.get("/bycategory/:id", getEventsByCategory);
 
 
 /* Get event categories */
-router.get("/categories", getCategories);
+router.get("/categories/get", getCategories);
 
 module.exports = router;

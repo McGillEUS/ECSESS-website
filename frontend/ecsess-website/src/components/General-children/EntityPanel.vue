@@ -3,7 +3,7 @@
         <div class="entity-screen" v-if="entity.id % 2 == 0">
             <div class="entity-screen-cover-photo-even">
                 <div class="img-container">
-                    <img :src="require('../../assets/'+entity.photo)" alt="" class="large-img">
+                    <img :src="require('../../assets/'+entity.image)" alt="" class="large-img">
                 </div>
                 <h3 class="imgtext">{{entity.name}}</h3>
             </div>
@@ -33,7 +33,7 @@
             </div>
             <div class="entity-screen-cover-photo-odd">
                 <div class="img-container">
-                    <img :src="require('../../assets/'+entity.photo)" alt="" class="large-img">
+                    <img :src="require('../../assets/'+entity.image)" alt="" class="large-img">
                 </div>
                 <h3 class="imgtext">{{entity.name}}</h3>
             </div>

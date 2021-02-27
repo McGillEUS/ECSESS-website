@@ -5,10 +5,11 @@
 
 //IMPORTS
 const express = require("express");
-const { /** add business logic functions here */ } = require("../../controller/user/Resources");
+const { postAcademicEmail } = require("../../controller/user/Resources");
 const router = express.Router();
 
 //ROUTE DEFINITIONS
-
+/* Send an academic email */
+router.post("/academic/email", postAcademicEmail);
 
 module.exports = router;

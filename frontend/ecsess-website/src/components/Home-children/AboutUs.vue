@@ -17,7 +17,7 @@
                         we are committed to building a lively community and growing young engineers' future careers.
                     </b>
                 </p>
-                <button id="learn-more" class="learn-more">Learn More</button>
+                <button id="learn-more" class="learn-more" @click="goToCouncil()">Learn More</button>
             </div>
             <div id="textimage" class="textbox">
                 <img id="council20192020" class="image" src="../../assets/council2019-2020.jpg" />
@@ -31,7 +31,10 @@ export default {
     name: "AboutUs",
     components: {},
     methods: {
-
+        goToCouncil: function () {
+            window.scrollTo(0,0);
+            this.$router.push({path: '/council'});
+        }
     }
 }
 </script>

@@ -4,6 +4,7 @@
         <div id="resources-page-body" class="page-body">
             <ResourcesIndex/>
             <AcademicResources id="academic-resources" class="academic-resources"/>
+            <AcademicContact id="academic-contact"/>
         </div>
     </div>
 </template>
@@ -12,10 +13,11 @@
 import ResourcesMainImage from "./Resources-children/ResourcesMainImage.vue"
 import AcademicResources from "./Resources-children/AcademicResources"
 import ResourcesIndex from "./Resources-children/ResourcesIndex"
+import AcademicContact from "./Resources-children/AcademicContact"
 
 export default {
     name: "Resources",
-    components: {ResourcesMainImage, AcademicResources, ResourcesIndex}
+    components: {ResourcesMainImage, AcademicResources, ResourcesIndex, AcademicContact}
 }
 </script>
 

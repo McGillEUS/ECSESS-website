@@ -35,6 +35,11 @@ export default {
 
 body {
   background-color: lightyellow;
+
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .route-transition {
