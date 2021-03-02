@@ -7,6 +7,11 @@
             <!-- TODO add the text/pic and hover variations after -->
             <EntityPanel :entity="event"/>
         </div>
+        <div>
+            <h5>
+                {{events}}
+            </h5>
+        </div>
     </div>
 </template>
 
@@ -24,8 +29,8 @@ export default {
     
     },
     created () {
-        axios.get('/api/user/events').then((events) => {
-            this.events = events.data.events;
+        axios.get('/api/user/events').then((eventsResponse) => {
+            this.events = eventsResponse.data.events;
         })
     }
 }

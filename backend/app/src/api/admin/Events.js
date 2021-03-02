@@ -13,7 +13,7 @@ const router = express.Router();
 router.get("/categories", getCategories);
 /* Post event */
 router.post("/", postEvent)
-/* Get event category */
+/* Get event category by name */
 router.get("/category/:name", getCategoryByName);
 /* Post event category */
 router.post("/category", postCategory);
