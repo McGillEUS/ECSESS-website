@@ -59,7 +59,8 @@ export default {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	height: 8em;
+	padding-top: 0.8em;
+	padding-bottom: 0.8em;
 	width: 100%;
 	background-color: rgb(243, 243, 211);
 }
@@ -98,12 +99,11 @@ export default {
 	padding-left: 1em;
 	padding-right: 1em;
 	transition: 0.3s;
-	border-radius: 0.5em;
 	background-size: 100% 200%;
 	background-image: linear-gradient(
 		to bottom,
 		transparent 50%,
-		rgb(205, 241, 188) 50%
+		rgba(216, 216, 164, 0.316) 50%
 	);
 }
 

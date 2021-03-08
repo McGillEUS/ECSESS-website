@@ -4,6 +4,7 @@ import VueRouter from "vue-router";
 import routes from "./routes/routes.js";
 import $ from "jquery";
 import VueFormulate from '@braid/vue-formulate';
+import vuesocial from "@growthbunker/vuesocial"
 
 Vue.config.productionTip = false;
 window.$ = $;
@@ -15,6 +16,7 @@ const router = new VueRouter({
 });
 
 Vue.use(VueFormulate);
+Vue.use(vuesocial);
 
 new Vue({
 	router,

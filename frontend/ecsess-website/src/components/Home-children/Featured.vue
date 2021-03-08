@@ -7,7 +7,6 @@
         <carousel>
             <slide v-for="(slide, i) in slides" :key="i" class="carousel-slide">
                 <img :src="require('../../assets/'+slide.image)" alt="" class="carousel-img">
-                <h3 class="carousel-text">{{slide.name}}</h3>
             </slide>
         </carousel>
     </div>

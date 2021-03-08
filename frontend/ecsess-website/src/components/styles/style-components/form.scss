@@ -98,6 +98,8 @@
   &[data-classification='button'] {
     button {
       // Style button inputs
+      padding: 1em;
+      margin-bottom: 2em;
     }
   }
   
@@ -178,12 +180,6 @@
     justify-content: center;
     align-items: center;
     display: flex;
-}
-
-#subject {
-}
-
-#email {
 }
 
 #send-message {

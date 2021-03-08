@@ -6,6 +6,7 @@
 @import "./style-components/images.scss";
 @import "./style-components/button.scss";
 @import "./style-components/carousel.scss";
+@import "./style-components/form.scss";
 
 .home-page {
     width: 100%;
@@ -19,4 +20,18 @@
 .resources {
     width: 100%;
     z-index: 0;
+}
+
+.submit-livewire {
+    margin-top: 3em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-livewire-info-pane {
+    width: 80vw;
+    background-color: rgb(243, 243, 211);
+    border-radius: 0.5em;
 }
