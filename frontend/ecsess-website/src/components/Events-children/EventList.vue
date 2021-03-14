@@ -7,11 +7,6 @@
             <!-- TODO add the text/pic and hover variations after -->
             <EntityPanel :entity="event"/>
         </div>
-        <div>
-            <h5>
-                {{events}}
-            </h5>
-        </div>
     </div>
 </template>
 

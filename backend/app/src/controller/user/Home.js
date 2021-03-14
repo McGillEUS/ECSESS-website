@@ -1,4 +1,8 @@
 const { getNewsService } = require("../../service/admin/Home");
+const nodemailer = require('nodemailer');
+const config = require("../../config/config");
+const fs = require('fs');
+const multiparty = require('multiparty');
 
 const getNews = async (req, res, next) => {
     try {
@@ -23,4 +27,42 @@ const getNews = async (req, res, next) => {
     }
 }
 
-module.exports = { getNews };
+const postLivewireEmail = async (req, res, next) => {
+    try {
+        console.log(req.body);
+        console.log("red: " + JSON.stringify(req));
+        let form = multiparty.Form();
+        let transporter = nodemailer.createTransport({
+            host: config.email.EMAILHOST,
+            port: config.email.EMAILPORT,
+            auth: {
+              user: config.email.EMAILUSER,
+              pass: config.email.EMAILPASS
+            }
+          })
+        let message = {
+            from: formData.senderEmail,
+            to: config.email.LIVEWIREEMAIL,
+            subject: `[ ${formData.senderName} - ${formData.senderOrganization} ] ${formData.subject}`,
+            text: formData.message,
+            attachments: [
+                {
+                    filename: formData.image,
+                    content: fs.createReadStream(formData.image.path)
+                },
+            ]
+        };
+        transporter.sendMail(message);
+        return res.status(200).json({
+            success: true,
+            message: "Message sent successfully"
+        })
+    } catch {
+        return res.status(400).json({
+            success: false,
+            message: `Bad request`
+        })
+    }
+}
+
+module.exports = { getNews, postLivewireEmail };

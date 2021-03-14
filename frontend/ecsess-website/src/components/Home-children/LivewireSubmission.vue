@@ -25,6 +25,7 @@
 
 <script>
 import axios from 'axios';
+import FormData from 'form-data';
 
 export default {
     name: "LivewireSubmission",
@@ -43,12 +44,18 @@ export default {
     },
     methods: {
         submitHandler: function () {
-            if (this.selectedRecipient === -1) {
-                this.error = "You must select a recipient in step 1!";
-            } else {
-                axios.post("/api/user/resources/academic/email", this.formData);
-                this.$forceUpdate();
-            }
+            let data = new FormData();
+            data.append('senderName', this.formData.senderName);
+            data.append('senderOrganization', this.formData.senderOrganization);
+            data.append('senderEmail', this.formData.senderEmail);
+            data.append('subject', this.formData.subject);
+            data.append('message', this.formData.message);
+            data.append('image', this.formData.image);
+            console.log(data);
+            axios.post("/api/user/home/livewire/email", data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            });
+            this.$forceUpdate();
             
         }
     },

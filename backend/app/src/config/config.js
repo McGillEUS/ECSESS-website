@@ -13,7 +13,8 @@ const {
     EMAILHOST,
     EMAILPORT,
     EMAILUSER,
-    EMAILPASS
+    EMAILPASS,
+    LIVEWIREEMAIL
 } = process.env;
 
 const config = {
@@ -29,7 +30,8 @@ const config = {
         EMAILHOST,
         EMAILPORT,
         EMAILUSER,
-        EMAILPASS
+        EMAILPASS,
+        LIVEWIREEMAIL
     }
 };
 
