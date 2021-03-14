@@ -35,7 +35,7 @@ const NewsTab = () => {
             )
         }
     }
-    const [value, setValue] = useState(0); // integer state
+    const [, setValue] = useState(0); // integer state
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         data.image = data.image[0].name;

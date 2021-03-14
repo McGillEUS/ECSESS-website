@@ -16,7 +16,7 @@ const FormField = (props) => {
         };
 
         fetchEC();
-    }, [])
+    })
     let eventCategoryList = []
     if (props.type === "select") {
         const ECList = eventCategories;

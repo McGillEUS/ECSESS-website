@@ -1,7 +1,7 @@
 import './styles/App.css';
 
-import EventsTab from './components/EventsTab';
-import EventCategoriesTab from './components/EventCategoriesTab';
+//import EventsTab from './components/EventsTab';
+//import EventCategoriesTab from './components/EventCategoriesTab';
 import SideMenu from './components/SideMenu';
 import Dashboard from './components/Dashboard';
 import { useState } from 'react';
