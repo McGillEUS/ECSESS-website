@@ -6,6 +6,7 @@ const fs = require('fs');
 const getNews = async (req, res, next) => {
     try {
         const news = await getNewsService();
+        console.log(news);
         if (news) {
             return res.status(200).json({
                 success: true,
