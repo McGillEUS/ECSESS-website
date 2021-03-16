@@ -1,4 +1,4 @@
-const models = require("../../server.js");
+const { models } = require("../../server.js");
 
 const postNewsService = async (data) => {
     try {

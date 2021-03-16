@@ -1,5 +1,5 @@
 
-const models = require("../../server.js");
+const { models } = require("../../server.js");
 
 const getEventsService = async () => {
     try {

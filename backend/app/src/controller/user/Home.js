@@ -1,4 +1,4 @@
-const { getNewsService } = require("../../service/admin/Home");
+const { getNewsService } = require("../../service/user/Home");
 const nodemailer = require('nodemailer');
 const config = require("../../config/config");
 const fs = require('fs');
@@ -6,7 +6,6 @@ const fs = require('fs');
 const getNews = async (req, res, next) => {
     try {
         const news = await getNewsService();
-        console.log(news);
         if (news) {
             return res.status(200).json({
                 success: true,

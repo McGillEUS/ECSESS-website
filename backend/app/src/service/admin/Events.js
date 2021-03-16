@@ -1,4 +1,4 @@
-const models = require("../../server.js");
+const { models } = require("../../server.js");
 
 const getCategoriesService = async (id) => {
     try {
