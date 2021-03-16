@@ -14,7 +14,9 @@ const {
     EMAILPORT,
     EMAILUSER,
     EMAILPASS,
-    LIVEWIREEMAIL
+    LIVEWIREEMAIL,
+    AWSACCESSKEY,
+    AWSSECRET
 } = process.env;
 
 const config = {
@@ -32,6 +34,10 @@ const config = {
         EMAILUSER,
         EMAILPASS,
         LIVEWIREEMAIL
+    },
+    aws: {
+        AWSACCESSKEY,
+        AWSSECRET
     }
 };
 

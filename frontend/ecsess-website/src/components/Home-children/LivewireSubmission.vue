@@ -12,7 +12,7 @@
                         <FormulateInput type="email" name="Your email" id="email" validation="required|email" class="form-input" label="What is your McGill email?" v-model="formData.senderEmail"/>
                         <FormulateInput type="text" name="subject" id="subject" validation="required" class="form-input" label="Submission title" v-model="formData.subject"/>
                         <FormulateInput type="textarea" name="message" validation="required" class="form-input" label="Type your blurb here" v-model="formData.message"/>
-                        <FormulateInput type="file" name="image" class="form-input" label="Add cover picture" v-model="formData.image"/>
+                        <FormulateInput type="file" name="image" class="form-input" label="Add cover picture" v-model="formData.image" id="livewire-image"/>
                         <FormulateInput type="submit" name="Submit"/>
                         <h4>{{error}}</h4>
                     </div>
@@ -45,12 +45,14 @@ export default {
     methods: {
         submitHandler: function () {
             let data = new FormData();
+            let imageFile = document.querySelector("#livewire-image");
+            console.log(imageFile.files[0])
             data.append('senderName', this.formData.senderName);
             data.append('senderOrganization', this.formData.senderOrganization);
             data.append('senderEmail', this.formData.senderEmail);
             data.append('subject', this.formData.subject);
             data.append('message', this.formData.message);
-            data.append('image', this.formData.image);
+            data.append('image', imageFile.files[0]);
             console.log(data);
             axios.post("/api/user/home/livewire/email", data, {
                 headers: { 'Content-Type': 'multipart/form-data' }

@@ -2,7 +2,6 @@ const { getNewsService } = require("../../service/admin/Home");
 const nodemailer = require('nodemailer');
 const config = require("../../config/config");
 const fs = require('fs');
-const multiparty = require('multiparty');
 
 const getNews = async (req, res, next) => {
     try {
@@ -30,8 +29,8 @@ const getNews = async (req, res, next) => {
 const postLivewireEmail = async (req, res, next) => {
     try {
         console.log(req.body);
-        console.log("red: " + JSON.stringify(req));
-        let form = multiparty.Form();
+        console.log("yee: " + JSON.stringify(req.file));
+        let formData = req.body;
         let transporter = nodemailer.createTransport({
             host: config.email.EMAILHOST,
             port: config.email.EMAILPORT,
@@ -47,8 +46,8 @@ const postLivewireEmail = async (req, res, next) => {
             text: formData.message,
             attachments: [
                 {
-                    filename: formData.image,
-                    content: fs.createReadStream(formData.image.path)
+                    filename: req.file.originalname,
+                    path: req.file.path
                 },
             ]
         };

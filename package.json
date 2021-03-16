@@ -4,7 +4,7 @@
   "description": "Official ECSESS website",
   "main": "server.js",
   "scripts": {
-    "server": "cd backend && npm install && npm run start",
+    "server": "cd backend && npm install && npm run testStart",
     "client": "cd frontend/ecsess-website && npm install && npm run --silent serve",
     "admin": "cd frontend/admin-panel && npm install && npm run start",
     "start": "concurrently \"npm run --silent server\" \"npm run --silent client\" \"npm run --silent admin\" ",

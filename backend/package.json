@@ -4,7 +4,8 @@
   "description": "Backend and admin controller for ecsess website",
   "main": "./app/src/server.js",
   "scripts": {
-    "start": "nodemon ./app/src/server.js",
+    "start": "node ./app/src/server.js",
+    "testStart": "nodemon ./app/src/server.js",
     "test": "mocha --reporter spec"
   },
   "author": "Ricky Liu & Adel Ahram",
@@ -14,17 +15,21 @@
     "sequelize-cli": "^6.2.0"
   },
   "dependencies": {
+    "aws-sdk": "^2.863.0",
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mocha": "^8.2.1",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
     "multiparty": "^4.2.2",
     "nodemailer": "^6.5.0",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
     "request": "^2.88.2",
-    "sequelize": "^6.5.0"
+    "sequelize": "^6.5.0",
+    "serverless-http": "^2.7.0"
   }
 }
