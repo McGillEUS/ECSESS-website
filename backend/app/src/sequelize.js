@@ -18,8 +18,6 @@ module.exports = function(Sequelize, config) {
         }
     });
 
-    console.log(JSON.stringify(sequelize));
-
     try {
         sequelize.authenticate();
         console.log('Connection has been established successfully.');
