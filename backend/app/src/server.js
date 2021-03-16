@@ -92,7 +92,8 @@ app.get("/", (req, res) => {
 //START SERVER FOR API
 //const server = http.createServer(app);
 const PORT = process.env.PORT || config.backend.TESTPORT; //change this for different builds
-app.listen(PORT, () => {
+const server = http.createServer();
+server.listen(PORT, () => {
     console.log(`Server is currently running on port ${PORT}`);
 })
 
