@@ -32,6 +32,7 @@ const app = express();
 app.use(
     cors({
         origin: config.backend.BACKEND_DOMAIN,
+        "Access-Control-Allow-Origin": config.backend.BACKEND_DOMAIN,
         methods: "GET,PUT,POST,DELETE",
     })
 );
