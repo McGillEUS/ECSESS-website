@@ -5,7 +5,7 @@
 <title> ECSESS council </title>
 
 <Section>
-	<p class="page-title">Meet the ECSESS council!</p>
+	<p class="page-title">Meet the council!</p>
 
 	<p>Group picture!</p>
 

@@ -8,7 +8,7 @@
 	<div>
 		<p class="text-ecsess-200 py-3 text-center">
 			Created by ECSESS with love {'<3'}. <br />
-			&copy; {year} under GNU General Public License v3.0.
+			&copy; ECSESS {year}, under GNU General Public License v3.0.
 		</p>
 	</div>
 </footer>
