@@ -8,14 +8,15 @@
 # Tech stack
 ## Frontend
 - SvelteKit (Svelte v5, Kit v2)
-- Frontend options:
   - JavaScript with JSDoc
-  - TailwindCSS (v4.0)
   - [Svelte Auto Adapter](https://svelte.dev/docs/kit/adapters)
+- TailwindCSS (v4.0)
+- Bits-UI (v1.22): Headless Component Library https://bits-ui.com
+
 - [`bun`](https://bun.sh) as Node.js package manager (similar to `npm`, `yarn`, `pnpm`, and `deno` v2)
 
 ## Content Management System (CMS)
-- Strapi CMS (v5)
+- Sanity CMS
 
 # Development guide
 - Clone the repo, install dependencies, and start dev environment:

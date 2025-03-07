@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
 
 @theme {
     --color-ecsess-200: #A9B7A0;
@@ -7,4 +9,18 @@
     --color-ecsess-600: #3B6A3A;
     --color-ecsess-800: #0A3D2A;
     --color-ecsess-black: #1F1F1F;
+}
+
+* {
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+h1 {
+    @apply text-3xl font-bold py-4;
+}
+
+.page-title {
+    @apply text-7xl font-bold py-4;
 }

@@ -7,11 +7,5 @@
 </script>
 
 <Navbar />
-<div class="h-screen bg-ecsess-800">
-	{@render children()}
-	<Footer />
-</div>
-
-<style>
-    @reference tailwindcss;
-</style>
+{@render children()}
+<Footer />

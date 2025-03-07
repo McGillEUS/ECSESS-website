@@ -1,7 +1,17 @@
 <script>
-    let { children = () => "Section placeholder" } = $props();
+	let { children = () => 'Section placeholder', black = false } = $props();
 </script>
 
-<div class="container mx-auto px-4 py-6 flex flex-col items-center justify-center gap-4 text-center">
-    {@render children()}
-</div>
+{#if black}
+	<div
+		class="bg-ecsess-black mx-auto flex min-h-[75vh] flex-col items-center justify-center gap-4 p-4 text-center text-ecsess-200"
+	>
+		{@render children()}
+	</div>
+{:else}
+	<div
+		class="bg-ecsess-800 mx-auto flex min-h-[75vh] flex-col items-center justify-center gap-4 p-4 text-center text-ecsess-200"
+	>
+		{@render children()}
+	</div>
+{/if}
