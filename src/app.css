@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+    --color-ecsess-200: #A9B7A0;
+    --color-ecsess-400: #5C8A5C;
+    --color-ecsess-600: #3B6A3A;
+    --color-ecsess-800: #0A3D2A;
+    --color-ecsess-black: #1F1F1F;
+}
