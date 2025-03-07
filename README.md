@@ -1,29 +1,31 @@
 # ECSESS Website
 > Made by ECSESS 2024-2025
 
-# Tech stack:
+# Prerequisite knowledge
+- `npm` knowledge. We use `bun` for this project. See https://bun.sh for installation guide.
+- Svelte & SvelteKit: Follow the tutorial here: https://svelte.dev/tutorial/svelte/welcome-to-svelte
+
+# Tech stack
+## Frontend
 - SvelteKit (Svelte v5, Kit v2)
-  - Start the project: [`sv`](https://github.com/sveltejs/cli).
-    ```bash
-    # create a new project in the current directory
-    npx sv create
-    ```
-- Frontend Options:
-  - JavaScript with JSDoc (sorry I don't like TypeScript)
-  - TailwindCSS (incl. typography, forms)
-  - [Svelte Adapter](https://svelte.dev/docs/kit/adapters): node
-  - [`bun`](https://bun.sh) as Node.js package manager (similar to `npm`, `yarn`, `pnpm`, and `deno` v2)
+- Frontend options:
+  - JavaScript with JSDoc
+  - TailwindCSS (v4.0)
+  - [Svelte Auto Adapter](https://svelte.dev/docs/kit/adapters)
+- [`bun`](https://bun.sh) as Node.js package manager (similar to `npm`, `yarn`, `pnpm`, and `deno` v2)
 
+## Content Management System (CMS)
 - Strapi CMS (v5)
-# Dev guide
-- Start dev enviornment: (assume `deno`)
-```bash
-bun run dev
 
-# or start the server and open the app in a new browser tab
-bun run dev -- --open
+# Development guide
+- Clone the repo, install dependencies, and start dev environment:
+```bash
+git clone https://github.com/mcgill-ecsess/ecsess-site.git
+bun i
+bun run dev
 ```
-- To create a production version of your app:
+
+- To create a production version of the website:
 ```bash
 bun run build
 bun run preview # to preview the production build
