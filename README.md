@@ -11,7 +11,6 @@
   - JavaScript with JSDoc
   - [Svelte Auto Adapter](https://svelte.dev/docs/kit/adapters)
 - TailwindCSS (v4.0)
-- Bits-UI (v1.22): Headless Component Library https://bits-ui.com
 
 - [`bun`](https://bun.sh) as Node.js package manager (similar to `npm`, `yarn`, `pnpm`, and `deno` v2)
 

@@ -1,17 +1,18 @@
 <script>
 	let { children = () => 'Section placeholder', black = false } = $props();
+
+	let tailwindClasses = $state(
+		'mx-auto flex min-h-[75vh] flex-col items-center justify-center gap-4 p-4 text-center text-ecsess-200'
+	);
+
+	if (black) {
+		tailwindClasses += ' bg-ecsess-black';
+	} else {
+		// green background
+		tailwindClasses += ' bg-ecsess-800';
+	}
 </script>
 
-{#if black}
-	<div
-		class="bg-ecsess-black mx-auto flex min-h-[75vh] flex-col items-center justify-center gap-4 p-4 text-center text-ecsess-200"
-	>
-		{@render children()}
-	</div>
-{:else}
-	<div
-		class="bg-ecsess-800 mx-auto flex min-h-[75vh] flex-col items-center justify-center gap-4 p-4 text-center text-ecsess-200"
-	>
-		{@render children()}
-	</div>
-{/if}
+<div class={tailwindClasses}>
+	{@render children()}
+</div>
