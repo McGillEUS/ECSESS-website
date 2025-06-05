@@ -5,6 +5,9 @@ const query = `*[_type == "homepage"].description[].children[].text`;
 
 export const load = async () => {
 	return {
-		description: await getFromCMS(query)
+		description: await getFromCMS(query),
+		ohs: "",
+		pictures: "",
+		FAQs: "",
 	};
 };
