@@ -1,15 +1,8 @@
 <script>
 	import Section from 'components/Section.svelte';
-
-	// Getting info from ECSESS CMS
-	// let description =
-	// 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
-	const query = '_type:homepage';
-
-	let description = $state();
-	description = fetch(
-		`https://${import.meta.env.SANITY_ID}.api.sanity.io/vX/data/query/production?query=${query}&perspective=drafts`
-	).then((res) => res.json).then((json) => json.toString());
+	import { PortableText } from '@portabletext/svelte';
+	/** loading things from the server side */
+	let { data } = $props();
 </script>
 
 <title> McGill ECSESS </title>
@@ -18,19 +11,18 @@
 <Section>
 	<div class="flex h-1/2 flex-col items-center justify-center text-center">
 		<p class="page-title">What is ECSESS?</p>
-
-		<p>{description}</p>
+		<div id="test">
+			<PortableText value={data.description} />
+		</div>
 	</div>
 </Section>
 
 <!-- Picture, FAQ -->
 <Section black>
+	<h1>Our student council</h1>
 	<div class="flex justify-around gap-12">
 		<div>
-			<p>PICTURES</p>
-		</div>
-		<div>
-			<p>FAQ</p>
+			<img src={data.councilPhoto} alt="ECSESS Council" />
 		</div>
 	</div>
 </Section>
@@ -38,6 +30,11 @@
 <!-- Office Hours Calendar -->
 <Section>
 	<div>
-		<p class="text-2xl">Office Hours</p>
+		<h1>FAQ</h1>
+		<p>Under development</p>
+	</div>
+	<div>
+		<h1 class="text-2xl">Office Hours</h1>
+		<p>Under development</p>
 	</div>
 </Section>

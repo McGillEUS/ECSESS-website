@@ -9,7 +9,8 @@ const config = {
 		alias: {
             // So you can import with `from 'components/...'`
             'components': 'src/components/',
-			'assets': 'src/assets'
+			'assets': 'src/assets',
+			'utils': 'src/utils'
         }
 	},
 
