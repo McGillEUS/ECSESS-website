@@ -1,7 +1,9 @@
 import { getFromCMS } from 'utils/utils.js';
 
-// needs to concat and format this text
-const descQuery = `*[_type == "homepage"].description[].children[].text`;
+const homepageQuery = `*[_type == "homepage"]{
+	"description": description[],
+	"councilPhoto": councilPhoto.asset->url
+}[0]`;
 
 const ohQuery = `*[_type=="oh"].schedule[]{
   day,
@@ -11,10 +13,12 @@ const ohQuery = `*[_type=="oh"].schedule[]{
 }`;
 
 export const load = async () => {
+	let CMSresponse = await getFromCMS(homepageQuery);
+
 	return {
-		description: await getFromCMS(descQuery),
-		ohs: await getFromCMS(ohQuery),
-		pictures: "",
-		FAQs: "",
+		description: CMSresponse.description,
+		councilPhoto: CMSresponse.councilPhoto
+		// ohs: await getFromCMS(ohQuery),
+		// FAQs: "",
 	};
 };
