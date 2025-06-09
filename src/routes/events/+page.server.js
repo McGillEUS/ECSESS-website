@@ -1,7 +1,7 @@
 import { getFromCMS } from 'utils/utils.js';
 
 // needs to concat and format this text
-const query = `*[_type == "events"]{
+const eventQuery = `*[_type == "events"]{
   name,
   category,
   date,
@@ -12,6 +12,6 @@ const query = `*[_type == "events"]{
 
 export const load = async () => {
 	return {
-		events: await getFromCMS(query)
+		events: await getFromCMS(eventQuery),
 	};
 };
