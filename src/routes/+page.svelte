@@ -3,7 +3,6 @@
 	import { PortableText } from '@portabletext/svelte';
 	/** loading things from the server side */
 	let { data } = $props();
-	console.log(data);
 </script>
 
 <title> McGill ECSESS </title>
