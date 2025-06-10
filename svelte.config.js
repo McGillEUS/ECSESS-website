@@ -1,5 +1,6 @@
 import { mdsvex } from 'mdsvex';
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-node';
+// import adapter from '@sveltejs/adapter-static';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,7 +9,8 @@ const config = {
 		alias: {
             // So you can import with `from 'components/...'`
             'components': 'src/components/',
-			'assets': 'src/assets'
+			'assets': 'src/assets',
+			'utils': 'src/utils'
         }
 	},
 
