@@ -5,25 +5,6 @@
 
 	/** loading things from the server side */
 	let { data } = $props();
-
-	// Getting info from ECSESS CMS
-	let longAnswer =
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
-
-	const faqs = [
-		{
-			q: 'A fequently asked question?',
-			a: 'This is a short answer'
-		},
-		{
-			q: 'A fequently asked question?',
-			a: 'This is a medium length answer. Lor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-		},
-		{
-			q: 'A fequently asked question?',
-			a: 'This is a long answer. ' + longAnswer
-		}
-	];
 </script>
 
 <title> McGill ECSESS </title>
@@ -46,9 +27,7 @@
 	</div>
 	<div>
 		<h1>FAQ</h1>
-		{#each faqs as { q, a }}
-			<FaqAccordion entry={{ title: q, description: a }} />
-		{/each}
+		<FaqAccordion entries={data.faqs} />
 	</div>
 </Section>
 <!-- Office Hours Calendar -->
