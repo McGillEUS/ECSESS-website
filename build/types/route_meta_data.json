@@ -1,0 +1,19 @@
+{
+	"/": [
+		"src/routes/+page.server.js"
+	],
+	"/council": [
+		"src/routes/council/+page.server.js"
+	],
+	"/events": [
+		"src/routes/events/+page.server.js"
+	],
+	"/join": [],
+	"/resources": [
+		"src/routes/resources/+page.server.js"
+	],
+	"/r/[shortname]": [
+		"src/routes/r/[shortname]/+page.server.js"
+	],
+	"/showroom": []
+}

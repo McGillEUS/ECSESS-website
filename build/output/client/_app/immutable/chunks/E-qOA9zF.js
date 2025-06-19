@@ -1,0 +1,1 @@
+import{n as r,o as c,q as s,E as i,v as h,w as p,x as d}from"./DOp_OFmA.js";function u(o,t,f){r&&c();var e=o,a,n;s(()=>{a!==(a=t())&&(n&&(p(n),n=null),a&&(n=h(()=>f(e,a))))},i),r&&(e=d)}export{u as c};
