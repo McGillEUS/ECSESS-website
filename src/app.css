@@ -23,5 +23,5 @@ h1 {
 }
 
 .page-title {
-    @apply text-7xl font-bold py-4;
+    @apply text-4xl md:text-6xl font-bold py-4;
 }
